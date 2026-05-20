@@ -69,9 +69,9 @@ export function SiteEntranceLoader() {
               <RugbanLogo height={72} priority />
             </motion.div>
 
-            <div className="flex w-52 max-w-[72vw] flex-col items-center gap-3">
+            <div className="flex w-52 max-w-[92vw] flex-col items-center gap-3 sm:w-auto">
               <motion.p
-                className="text-[10px] uppercase tracking-[0.4em] text-muted"
+                className="whitespace-nowrap text-[10px] uppercase tracking-[0.28em] text-muted sm:tracking-[0.36em]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -83,7 +83,7 @@ export function SiteEntranceLoader() {
               </motion.p>
 
               <motion.div
-                className="w-full"
+                className="w-full min-w-[13rem] sm:min-w-[16rem]"
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
