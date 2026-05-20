@@ -28,7 +28,7 @@ export function ProgramCard({
     <motion.article
       variants={fadeUp({ reducedMotion, narrowMotion })}
       className={cn(
-        "group relative isolate flex min-h-[320px] w-full flex-col justify-between gap-10 border-[0.5px] border-white/14 bg-[#1a1a1a] p-8 pb-12 transition-colors duration-300 hover:-translate-y-1 hover:border-accent",
+        "group relative isolate flex h-[360px] min-h-[360px] w-full flex-col justify-between gap-8 overflow-hidden border-[0.5px] border-white/14 bg-[#1a1a1a] p-8 pb-10 transition-colors duration-300 hover:-translate-y-1 hover:border-accent",
         featured && "ring-2 ring-accent",
         className,
       )}
@@ -59,7 +59,9 @@ export function ProgramCard({
           </div>
         </div>
       </div>
-      <p className="text-base text-muted">{program.description}</p>
+      <p className="line-clamp-4 text-base leading-relaxed text-muted">
+        {program.description}
+      </p>
     </motion.article>
   );
 }

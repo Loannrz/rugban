@@ -15,11 +15,9 @@ export function ProgramsRailSection() {
   const narrowMotion = useIsNarrowMotion();
 
   const gridClasses = "grid gap-6 md:grid-cols-2 lg:hidden";
-  const railClasses =
-    "program-rail hidden gap-8 overflow-x-auto pb-6 lg:flex";
 
   return (
-    <section className="section-y bg-black">
+    <section className="overflow-x-clip bg-black pb-0 pt-12 md:pt-14 lg:pt-20">
       <div className="container-site mb-14 space-y-6">
         <ViewportReveal staggerChildren threshold={0.2}>
           <motion.div variants={fadeUp({ reducedMotion, narrowMotion })}>
@@ -34,13 +32,14 @@ export function ProgramsRailSection() {
         </ViewportReveal>
       </div>
 
-      <div className="container-site lg:pb-16">
+      <div className="container-site min-w-0 pb-0">
         <ViewportReveal staggerChildren delayChildren={0.08}>
-          <div className={gridClasses}>
+          <div className={`${gridClasses} auto-rows-fr`}>
             {programs.map((program) => (
               <motion.div
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 key={program.id}
+                className="h-[360px]"
               >
                 <ProgramCard
                   program={program}
@@ -50,16 +49,18 @@ export function ProgramsRailSection() {
             ))}
           </div>
 
-          <div className={railClasses}>
-            {programs.map((program) => (
-              <motion.div
-                key={`rail-${program.id}`}
-                variants={fadeUp({ reducedMotion, narrowMotion })}
-                className={`shrink-0 basis-[360px] xl:basis-[380px]`}
-              >
-                <ProgramCard program={program} />
-              </motion.div>
-            ))}
+          <div className="program-rail-scroll hidden pb-6 lg:block">
+            <div className="program-rail items-stretch gap-8">
+              {programs.map((program) => (
+                <motion.div
+                  key={`rail-${program.id}`}
+                  variants={fadeUp({ reducedMotion, narrowMotion })}
+                  className="h-[360px] shrink-0 basis-[360px] xl:basis-[380px]"
+                >
+                  <ProgramCard program={program} className="h-full" />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </ViewportReveal>
       </div>

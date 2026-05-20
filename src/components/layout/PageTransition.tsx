@@ -53,7 +53,7 @@ export function PageTransitionBridge({ children }: PageTransitionBridgeProps) {
 
   return (
     <>
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 min-w-0 overflow-x-clip">{children}</div>
       <motion.div
         aria-hidden
         style={{ translateY }}

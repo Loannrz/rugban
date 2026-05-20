@@ -40,7 +40,7 @@ export function StatCard({
         end={value}
         suffix={suffix}
         className={cn(
-          "font-display text-clamp-stat leading-none",
+          "block font-display text-[clamp(3.25rem,9vw,6.5rem)] leading-[0.88] tracking-[0.02em]",
           theme === "light" ? "text-ink" : "text-white",
         )}
       />

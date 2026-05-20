@@ -63,7 +63,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${bebas.variable} bg-black antialiased`}>
         <AppProviders>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen min-w-0 overflow-x-clip">{children}</main>
           <Footer />
         </AppProviders>
       </body>

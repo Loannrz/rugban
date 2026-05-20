@@ -27,7 +27,7 @@ const config: Config = {
       fontSize: {
         "clamp-h1": "clamp(36px, 6vw, 96px)",
         "clamp-h2": "clamp(28px, 4vw, 56px)",
-        "clamp-stat": "clamp(44px, 6vw, 88px)",
+        "clamp-stat": "clamp(52px, 8vw, 104px)",
       },
       colors: {
         bg: {

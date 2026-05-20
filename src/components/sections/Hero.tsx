@@ -20,7 +20,7 @@ export function HeroSection() {
   const narrowMotion = useIsNarrowMotion();
 
   return (
-    <section className="relative isolate flex min-h-[100dvh] min-h-screen flex-col bg-black text-white">
+    <section className="relative isolate flex min-h-[100dvh] min-h-screen flex-col overflow-x-clip bg-black text-white">
       <div className="absolute inset-0">
         <Image
           priority

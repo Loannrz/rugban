@@ -16,7 +16,7 @@ export function InsertionSocialeSection() {
   const narrowMotion = useIsNarrowMotion();
 
   return (
-    <section className="section-y bg-black text-white">
+    <section className="bg-black pb-12 pt-0 text-white md:pb-14 lg:pb-20">
       <div className="container-site space-y-16">
         <ViewportReveal staggerChildren>
           <motion.div variants={fadeUp({ reducedMotion, narrowMotion })}>
