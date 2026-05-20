@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -43,9 +42,10 @@ const documents = [
     anchor: "documents-prepa-affiche",
     titre: "Affiche officielle",
     texte:
-      "Version PDF destinée aux salles d'infos jeunes franciliennes. Contient planning typique semaine + contacts permanence.",
-    href: "/contact?doc=affiche-prepa-sport",
-    cta: "Réceptionner le fichier",
+      "Affiche à diffuser dans les salles d'infos jeunes franciliennes : rentrée, contacts et QR code de pré-inscription.",
+    href: "/documents/prepa-sport/affiche-prepa-sport.png",
+    download: "Rugban-Prepa-Sport-Affiche.png",
+    cta: "Télécharger l'affiche",
     featured: false,
   },
   {
@@ -54,8 +54,9 @@ const documents = [
     titre: "Brochure pédagogique",
     texte:
       "Synthèse à transmettre à vos équipes financières : budget porté collectivement avec ANS / Région / collectivités hôtes franciliennes.",
-    href: "/contact?doc=brochure-prepa",
-    cta: "Demander la brochure",
+    href: "/documents/prepa-sport/brochure-prepa-sport.pdf",
+    download: "Rugban-Prepa-Sport-Brochure.pdf",
+    cta: "Télécharger la brochure",
     featured: true,
   },
 ] as const;
@@ -201,9 +202,9 @@ export function PrepaSportCandidatureSection() {
                   {doc.texte}
                 </p>
 
-                <Link
-                  prefetch={false}
+                <a
                   href={doc.href}
+                  download={doc.download}
                   className={
                     doc.featured
                       ? "group relative mt-8 inline-flex items-center gap-2 border border-white/25 bg-black/30 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:border-white hover:bg-white/10"
@@ -215,7 +216,7 @@ export function PrepaSportCandidatureSection() {
                     aria-hidden
                     className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
-                </Link>
+                </a>
               </motion.article>
             ))}
           </div>

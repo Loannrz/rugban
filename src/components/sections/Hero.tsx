@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { heroStats } from "@/data/stats";
@@ -12,31 +11,17 @@ import { CountUpNumber } from "../ui/CountUp";
 import { CTAButton } from "../ui/CTAButton";
 import { ViewportReveal } from "../ui/ViewportReveal";
 
-const heroBackdrop =
-  "https://images.unsplash.com/photo-1575361204480-aadea087e478?auto=format&fit=crop&w=2400&q=80";
-
 export function HeroSection() {
   const reducedMotion = useReducedMotion() === true;
   const narrowMotion = useIsNarrowMotion();
 
   return (
     <section className="relative isolate flex min-h-[100dvh] min-h-screen flex-col overflow-x-clip bg-black text-white">
-      <div className="absolute inset-0">
-        <Image
-          priority
-          src={heroBackdrop}
-          alt="Séquence de passe sur un terrain de rugby en noir et blanc"
-          fill
-          sizes="100vw"
-          className="object-cover grayscale lg:object-center"
-          quality={88}
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/92"
-        />
-        <div aria-hidden className="absolute inset-0 bg-black/60" />
-      </div>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-black" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,107,53,0.08),transparent_55%)]"
+      />
 
       <div className="container-site relative z-10 flex min-h-[100dvh] min-h-screen flex-col pt-[4.75rem] lg:block lg:pt-[5.25rem]">
         <div className="relative z-20 shrink-0 text-center lg:absolute lg:inset-x-0 lg:top-[5.25rem] lg:pl-8 lg:text-left xl:pl-10">
