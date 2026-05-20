@@ -85,10 +85,10 @@ export function Footer({ className }: FooterProps) {
                 </span>
                 <Link
                   prefetch={false}
-                  href="mailto:contact@rugban.fr"
+                  href={siteConfig.emailHref}
                   className="leading-snug text-white transition-colors hover:text-accent"
                 >
-                  contact@rugban.fr
+                  {siteConfig.email}
                 </Link>
               </li>
             </ul>

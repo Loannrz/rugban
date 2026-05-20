@@ -20,6 +20,8 @@ export const siteConfig = {
   city: "Courbevoie",
   phone: "06 80 04 40 44",
   phoneHref: "tel:+33680044044",
+  email: "contact@rugban.fr",
+  emailHref: "mailto:contact@rugban.fr",
   social: {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
