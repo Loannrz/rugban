@@ -39,7 +39,7 @@ export function HeroSection() {
       </div>
 
       <div className="container-site relative z-10 flex min-h-[100dvh] min-h-screen flex-col pt-[4.75rem] lg:block lg:pt-[5.25rem]">
-        <div className="relative z-20 shrink-0 text-center lg:absolute lg:inset-x-0 lg:top-[5.25rem] lg:text-left">
+        <div className="relative z-20 shrink-0 text-center lg:absolute lg:inset-x-0 lg:top-[5.25rem] lg:pl-8 lg:text-left xl:pl-10">
           <ViewportReveal immediate className="block">
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-accent sm:text-[11px]">
               Association loi 1901 • Depuis 2006 • Île-de-France
@@ -52,7 +52,7 @@ export function HeroSection() {
         </div>
 
         <div className="relative z-20 mt-auto shrink-0 lg:absolute lg:inset-x-0 lg:bottom-0">
-          <div className="mb-4 space-y-3 sm:mb-5 sm:space-y-4">
+          <div className="mb-4 space-y-3 sm:mb-5 sm:space-y-4 lg:pl-8 xl:pl-10">
             <ViewportReveal>
               <p className="mx-auto max-w-[520px] text-center text-sm leading-snug text-muted sm:text-[15px] lg:mx-0 lg:text-left">
                 Depuis 2006, nous utilisons le sport comme levier d&apos;insertion
@@ -90,7 +90,7 @@ export function HeroSection() {
           <ViewportReveal staggerChildren threshold={0.35} delayChildren={0.05}>
             <div
               id="hero-chiffres"
-              className="scroll-mt-4 grid gap-y-8 border-y border-white/15 px-4 py-6 sm:px-0 sm:py-8 lg:grid-cols-4 lg:gap-y-0 lg:divide-x lg:divide-y-0 lg:divide-white/20 lg:divide-dashed"
+              className="scroll-mt-4 grid w-full gap-y-8 border-y border-white/15 px-4 py-6 sm:px-0 sm:py-8 lg:relative lg:left-1/2 lg:grid-cols-4 lg:gap-y-0 lg:divide-x lg:divide-y-0 lg:divide-white/20 lg:divide-dashed lg:w-screen lg:max-w-none lg:-translate-x-1/2"
             >
               {heroStats.map((stat) => (
                 <motion.article

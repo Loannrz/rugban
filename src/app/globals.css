@@ -155,12 +155,11 @@
     left: 50%;
     top: 54%;
     z-index: 1;
-    width: min(92vw, 46rem);
+    width: min(78vw, 36rem);
     height: auto;
-    color: rgba(210, 214, 222, 0.17);
+    opacity: 0.2;
     pointer-events: none;
     translate: -50% -50%;
-    rotate: -22deg;
   }
 
   .hero-title {

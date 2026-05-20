@@ -5,29 +5,47 @@ import { useEffect, useState } from "react";
 
 import { RugbanLogo } from "@/components/ui/RugbanLogo";
 
-const STORAGE_KEY = "rugban-loader-session";
+const LOADER_DURATION_MS = 1500;
+const REDUCED_MOTION_DURATION_MS = 300;
 
 export function SiteEntranceLoader() {
   const reducedMotion = useReducedMotion() === true;
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const loaderDurationMs = reducedMotion
+    ? REDUCED_MOTION_DURATION_MS
+    : LOADER_DURATION_MS;
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    if (sessionStorage.getItem(STORAGE_KEY)) {
-      setVisible(false);
-      return;
-    }
-
-    setVisible(true);
     const hide = window.setTimeout(() => {
       setVisible(false);
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    }, reducedMotion ? 300 : 1500);
+    }, loaderDurationMs);
 
     return () => window.clearTimeout(hide);
+  }, [loaderDurationMs]);
+
+  useEffect(() => {
+    if (reducedMotion) {
+      setProgress(100);
+      return;
+    }
+
+    setProgress(0);
+    const startedAt = performance.now();
+
+    const tick = (now: number) => {
+      const next = Math.min(
+        100,
+        Math.round(((now - startedAt) / LOADER_DURATION_MS) * 100),
+      );
+      setProgress(next);
+      if (next < 100) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    const frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
   }, [reducedMotion]);
 
   const transition = reducedMotion ? { duration: 0 } : { duration: 0.6 };
@@ -50,14 +68,52 @@ export function SiteEntranceLoader() {
             >
               <RugbanLogo height={72} priority />
             </motion.div>
-            <motion.p
-              className="text-[10px] uppercase tracking-[0.4em] text-muted"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: reducedMotion ? 0 : 0.5, delay: reducedMotion ? 0 : 0.4 }}
-            >
-              Rugby Urban Attitude • Chargement
-            </motion.p>
+
+            <div className="flex w-52 max-w-[72vw] flex-col items-center gap-3">
+              <motion.p
+                className="text-[10px] uppercase tracking-[0.4em] text-muted"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  duration: reducedMotion ? 0 : 0.5,
+                  delay: reducedMotion ? 0 : 0.4,
+                }}
+              >
+                Rugby Urban Attitude • Chargement
+              </motion.p>
+
+              <motion.div
+                className="w-full"
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: reducedMotion ? 0 : 0.4,
+                  delay: reducedMotion ? 0 : 0.55,
+                }}
+              >
+                <div
+                  className="h-1 w-full overflow-hidden rounded-full bg-white/10"
+                  role="progressbar"
+                  aria-valuenow={progress}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-label="Chargement du site"
+                >
+                  <motion.div
+                    className="h-full rounded-full bg-accent"
+                    initial={{ width: "0%" }}
+                    animate={{ width: `${progress}%` }}
+                    transition={{
+                      duration: reducedMotion ? 0 : 0.12,
+                      ease: "linear",
+                    }}
+                  />
+                </div>
+                <p className="mt-2 text-[10px] font-semibold tabular-nums tracking-[0.2em] text-accent">
+                  {progress}%
+                </p>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
       ) : null}

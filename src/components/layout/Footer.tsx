@@ -1,14 +1,11 @@
 "use client";
 
-import { Camera, Link2, Mail, MapPin, Phone, Share2 } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 import { navItems, siteConfig } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 
-import { CTAButton } from "../ui/CTAButton";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
 import { RugbanLogo } from "../ui/RugbanLogo";
 
 type FooterProps = {
@@ -16,12 +13,6 @@ type FooterProps = {
 };
 
 const footerLinks = [...navItems, { label: "Prépa sport", href: "/prepa-sport" }];
-
-const socialLinks = [
-  { name: "Facebook", Icon: Share2, href: siteConfig.social.facebook },
-  { name: "Instagram", Icon: Camera, href: siteConfig.social.instagram },
-  { name: "LinkedIn", Icon: Link2, href: siteConfig.social.linkedin },
-] as const;
 
 export function Footer({ className }: FooterProps) {
   const year = new Date().getFullYear();
@@ -52,50 +43,50 @@ export function Footer({ className }: FooterProps) {
         Rugban
       </div>
 
-      <div className="container-site relative py-14 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <div className="space-y-8 lg:col-span-5">
-            <div className="space-y-5">
-              <RugbanLogo height={48} />
-              <p className="max-w-sm text-base leading-relaxed text-white/85">
+      <div className="container-site relative py-10 lg:py-11">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-8">
+          <div className="space-y-5 lg:col-span-8">
+            <div className="space-y-3">
+              <RugbanLogo height={40} />
+              <p className="max-w-sm text-sm leading-relaxed text-white/85">
                 {siteConfig.tagline}
               </p>
-              <p className="text-sm leading-relaxed text-muted">
+              <p className="text-xs leading-relaxed text-muted">
                 Association loi 1901 — insertion sociale et professionnelle par
                 le rugby en Île-de-France depuis 2006.
               </p>
             </div>
 
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
-                  <MapPin className="h-4 w-4" aria-hidden />
+            <ul className="space-y-2.5 text-sm">
+              <li className="flex items-start gap-2.5">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
+                  <MapPin className="h-3.5 w-3.5" aria-hidden />
                 </span>
-                <address className="not-italic leading-relaxed text-muted">
+                <address className="not-italic leading-snug text-muted">
                   <span className="block text-white">{siteConfig.addressLine}</span>
                   {siteConfig.postcode} {siteConfig.city}
                 </address>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
-                  <Phone className="h-4 w-4" aria-hidden />
+              <li className="flex items-start gap-2.5">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
+                  <Phone className="h-3.5 w-3.5" aria-hidden />
                 </span>
                 <Link
                   prefetch={false}
                   href={siteConfig.phoneHref}
-                  className="leading-relaxed text-white transition-colors hover:text-accent"
+                  className="leading-snug text-white transition-colors hover:text-accent"
                 >
                   {siteConfig.phone}
                 </Link>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
-                  <Mail className="h-4 w-4" aria-hidden />
+              <li className="flex items-start gap-2.5">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
+                  <Mail className="h-3.5 w-3.5" aria-hidden />
                 </span>
                 <Link
                   prefetch={false}
                   href="mailto:contact@rugban.fr"
-                  className="leading-relaxed text-white transition-colors hover:text-accent"
+                  className="leading-snug text-white transition-colors hover:text-accent"
                 >
                   contact@rugban.fr
                 </Link>
@@ -103,11 +94,11 @@ export function Footer({ className }: FooterProps) {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
-            <h2 className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <div className="lg:col-span-4">
+            <h2 className="mb-4 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
               Navigation
             </h2>
-            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -121,71 +112,11 @@ export function Footer({ className }: FooterProps) {
               ))}
             </ul>
           </div>
-
-          <div className="space-y-6 lg:col-span-4">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
-              Restez informé
-            </h2>
-
-            <form
-              aria-label="Inscription newsletter"
-              action="mailto:contact@rugban.fr"
-              method="post"
-              className="space-y-4 border border-white/12 bg-gradient-to-br from-white/[0.05] to-transparent p-5 backdrop-blur-sm"
-              onSubmit={(event) => {
-                event.preventDefault();
-                window.location.href =
-                  "mailto:contact@rugban.fr?subject=Newsletter%20RUGBAN";
-              }}
-            >
-              <div className="space-y-2">
-                <Label htmlFor="news-email" className="text-xs text-muted">
-                  Newsletter mensuelle
-                </Label>
-                <p className="text-sm leading-relaxed text-white/80">
-                  Actualités programmes, sessions Prépa Sport et événements
-                  terrain.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Input
-                  id="news-email"
-                  name="email"
-                  placeholder="Votre courriel"
-                  type="email"
-                  required
-                  className="min-w-0 flex-1 border-white/15 bg-black/40"
-                />
-                <CTAButton type="submit" size="sm" className="shrink-0">
-                  S&apos;inscrire
-                </CTAButton>
-              </div>
-            </form>
-
-            <div className="space-y-3">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">
-                Réseaux sociaux
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {socialLinks.map(({ href, Icon, name }) => (
-                  <Link
-                    prefetch={false}
-                    key={name}
-                    aria-label={`${name} de ${siteConfig.name}`}
-                    href={href}
-                    className="inline-flex h-11 w-11 items-center justify-center border border-white/12 bg-white/[0.03] text-muted transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="container-site flex flex-col items-start justify-between gap-4 py-5 text-[11px] text-muted md:flex-row md:items-center">
+        <div className="container-site flex flex-col items-start justify-between gap-3 py-3.5 text-[11px] text-muted md:flex-row md:items-center">
           <p>
             © {year} {siteConfig.fullName} ({siteConfig.name}) — Tous droits
             réservés.

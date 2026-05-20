@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -11,62 +12,23 @@ import {
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
 import { cn } from "@/lib/utils";
 
+const RUGBY_BALL_BACKDROP = "/hero/rugby-ball-backdrop.png";
+
 type HeroOverlapTitleProps = {
   className?: string;
 };
 
 function RugbyBallBackdrop() {
   return (
-    <svg
-      viewBox="0 0 260 120"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="hero-title__ball"
+    <Image
+      src={RUGBY_BALL_BACKDROP}
+      alt=""
+      width={328}
+      height={269}
+      priority
       aria-hidden
-    >
-      <path
-        d="M12 60 C48 4 212 4 248 60"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 60 C48 116 212 116 248 60"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M130 14 C138 60 122 60 130 106"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 60 C38 22 88 10 130 14"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M12 60 C38 98 88 110 130 106"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M248 60 C222 22 172 10 130 14"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-      <path
-        d="M248 60 C222 98 172 110 130 106"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-      />
-    </svg>
+      className="hero-title__ball"
+    />
   );
 }
 
