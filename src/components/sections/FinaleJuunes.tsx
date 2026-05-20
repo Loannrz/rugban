@@ -58,7 +58,7 @@ export function FinaleJuunesSection() {
         <ViewportReveal staggerChildren className="space-y-10 lg:col-span-7">
           <motion.div variants={fadeUp({ reducedMotion, narrowMotion })}>
             <SectionLabel
-              label="Prépa sport — session ouverte"
+              label="Prépa sport - session ouverte"
               className="text-lime [&>span:first-child]:bg-lime"
             />
           </motion.div>

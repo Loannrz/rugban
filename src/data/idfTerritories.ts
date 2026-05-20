@@ -11,7 +11,7 @@ export type IdfTerritory = {
   description: string;
 };
 
-/** Positions espacées en étoile autour de Paris — cohérence N/S/E/O. */
+/** Positions espacées en étoile autour de Paris - cohérence N/S/E/O. */
 export const idfTerritories: IdfTerritory[] = [
   {
     id: "paris",

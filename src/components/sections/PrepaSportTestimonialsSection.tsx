@@ -95,7 +95,7 @@ export function PrepaSportTestimonialsSection() {
               className="text-base leading-relaxed text-muted lg:text-lg"
             >
               Retours de diplômés et passerelle vers la Passe D pour les
-              publics plus jeunes — deux entrées complémentaires dans le
+              publics plus jeunes - deux entrées complémentaires dans le
               réseau Rugban.
             </motion.p>
           </div>

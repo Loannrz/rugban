@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
     siteName: "Rugby Urban Attitude",
-    title: "Rugby Urban Attitude — insertion par le sport",
+    title: "Rugby Urban Attitude - insertion par le sport",
     description:
       "Insertion sociale et professionnelle pour les jeunes d'Île-de-France : programmes urbains gratuits et parcours certifiants.",
     url:

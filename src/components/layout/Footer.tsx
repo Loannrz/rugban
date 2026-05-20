@@ -52,7 +52,7 @@ export function Footer({ className }: FooterProps) {
                 {siteConfig.tagline}
               </p>
               <p className="text-xs leading-relaxed text-muted">
-                Association loi 1901 — insertion sociale et professionnelle par
+                Association loi 1901 - insertion sociale et professionnelle par
                 le rugby en Île-de-France depuis 2006.
               </p>
             </div>
@@ -118,7 +118,7 @@ export function Footer({ className }: FooterProps) {
       <div className="relative border-t border-white/10">
         <div className="container-site flex flex-col items-start justify-between gap-3 py-3.5 text-[11px] text-muted md:flex-row md:items-center">
           <p>
-            © {year} {siteConfig.fullName} ({siteConfig.name}) — Tous droits
+            © {year} {siteConfig.fullName} ({siteConfig.name}) - Tous droits
             réservés.
           </p>
           <Link

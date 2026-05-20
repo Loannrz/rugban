@@ -39,7 +39,7 @@ function MapPin({
       onClick={onActivate}
       role="button"
       tabIndex={0}
-      aria-label={`${territory.name} (${territory.code}) — ${territory.city}`}
+      aria-label={`${territory.name} (${territory.code}) - ${territory.city}`}
       aria-pressed={isActive}
     >
       <motion.circle

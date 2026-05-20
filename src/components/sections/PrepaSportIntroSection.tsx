@@ -96,7 +96,7 @@ export function PrepaSportIntroSection() {
             </div>
 
             <p className="relative mt-8 border-t border-white/10 pt-6 text-sm leading-relaxed text-white/65">
-              Trois blocs interconnectés — sport, pro, socio-éducation — jusqu&apos;à
+              Trois blocs interconnectés - sport, pro, socio-éducation - jusqu&apos;à
               la remise officielle diplômante.
             </p>
 

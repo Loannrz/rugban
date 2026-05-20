@@ -1,7 +1,7 @@
 export const palmarès = [
   {
     year: "2022",
-    line: "1re Circuit Européen — 2e Challenge FFR",
+    line: "1re Circuit Européen - 2e Challenge FFR",
   },
   {
     year: "2023",
@@ -30,12 +30,12 @@ export const teamIdentityPoints = [
 export const hintonArticle = {
   title: "Une saison écrite comme une montée en puissance",
   subtitle:
-    "Entretien esprit magazine — comment le collectif féminin a verrouillé son jeu en fin de tournoi",
+    "Entretien esprit magazine - comment le collectif féminin a verrouillé son jeu en fin de tournoi",
   paragraphs: [
     "Howard Hinton suit le circuit national depuis plusieurs saisons et souligne la progression constante du groupe francilien : mise en place d'un jeu direct, précision défensive retrouvé en phase finale et confiance distribuée sur toute la largeur.",
     "Les joueuses n'ont pas seulement gagné un titre ; elles montrent qu'une organisation associative peut porter une ambition sportive de haut niveau tout en restant reliée aux jeunes quartiers où commence le parcours.",
     "À l'intersaison, l'enjeu est double : pérenniser un effectif équilibré et ouvrir le recrutement vers des talents issus du réseau de clubs partenaires, sans perdre ce qui fait la couleur Rugban.",
   ],
   pullQuote:
-    "Championnes, oui — surtout un message pour les suivantes qui verront désormais l'ellipse comme un lieu possible.",
+    "Championnes, oui - surtout un message pour les suivantes qui verront désormais l'ellipse comme un lieu possible.",
 };

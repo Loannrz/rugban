@@ -24,7 +24,7 @@ export function RugbanLogo({
   const image = (
     <Image
       src={LOGO_SRC}
-      alt="Rugban — Rugby Urban Attitude"
+      alt="Rugban - Rugby Urban Attitude"
       width={width}
       height={height}
       priority={priority}
@@ -39,7 +39,7 @@ export function RugbanLogo({
         href="/"
         prefetch={false}
         className="inline-flex shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b35]"
-        aria-label="Rugban — accueil"
+        aria-label="Rugban - accueil"
       >
         {image}
       </Link>

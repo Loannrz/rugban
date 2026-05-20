@@ -112,7 +112,7 @@ export function InsertionSocialeSection() {
               {[
                 "Passe D pour les plus jeunes : immersion en club pro et sur les chantiers du sport événementiel.",
                 "Prépa Sport pour les 16-25 ans : parcours certifiant jusqu'au BAFA ou au socle BP JEPS.",
-                "Trois blocs métiers — sportifs, socio-éducatifs, professionnels — avec clubs pros et événements terrain.",
+                "Trois blocs métiers - sportifs, socio-éducatifs, professionnels - avec clubs pros et événements terrain.",
               ].map((item, index) => (
                 <li key={item} className="flex gap-4">
                   <span className="font-display text-2xl leading-none text-accent/90">

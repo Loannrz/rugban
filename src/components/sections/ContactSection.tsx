@@ -27,7 +27,7 @@ const contactChannels = [
     title: "Écrivez-nous",
     value: siteConfig.email,
     href: siteConfig.emailHref,
-    hint: "Jeune, structure ou entreprise — décrivez votre demande.",
+    hint: "Jeune, structure ou entreprise - décrivez votre demande.",
     icon: Mail,
     accent: "lime" as const,
   },

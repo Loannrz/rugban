@@ -50,7 +50,7 @@ export function Rugban7sPalmarèsSection() {
 
             <SectionLabel label="Palmarès" />
             <p className="mt-4 font-display text-[clamp(1.5rem,3vw,2rem)] uppercase leading-none text-white/90">
-              2022 — 2025
+              2022 - 2025
             </p>
 
             <ol className="relative mt-10 space-y-0 border-l border-dashed border-white/15 pl-7">
