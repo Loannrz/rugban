@@ -49,10 +49,11 @@ export function PartenairesLogosSection() {
                 {bloc.titre}
               </p>
               <ViewportReveal variants={staggerContainer(reducedMotion, 0.05)}>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-6 overflow-visible sm:grid-cols-2 lg:grid-cols-4">
                   {bloc.collection.map((partner) => (
                     <motion.div
                       key={`${bloc.titre}-${partner.id}`}
+                      className="overflow-visible"
                       variants={fadeUp({
                         reducedMotion,
                         narrowMotion,

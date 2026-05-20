@@ -15,35 +15,56 @@ type HeroOverlapTitleProps = {
   className?: string;
 };
 
-function RugbyBallBackdrop({ className }: { className?: string }) {
+function RugbyBallBackdrop() {
   return (
     <svg
-      viewBox="0 0 120 84"
+      viewBox="0 0 260 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className="hero-title__ball"
       aria-hidden
     >
-      <ellipse
-        cx="60"
-        cy="42"
-        rx="52"
-        ry="34"
+      <path
+        d="M12 60 C48 4 212 4 248 60"
         stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-lime/70"
+        strokeWidth="1"
+        strokeLinecap="round"
       />
       <path
-        d="M22 42c10-18 24-24 32-24s22 6 32 24c-10 18-24 24-32 24s-22-6-32-24Z"
+        d="M12 60 C48 116 212 116 248 60"
         stroke="currentColor"
-        strokeWidth="1.25"
-        className="text-white/40"
+        strokeWidth="1"
+        strokeLinecap="round"
       />
       <path
-        d="M98 42c-10 18-24 24-32 24s-22-6-32-24"
+        d="M130 14 C138 60 122 60 130 106"
         stroke="currentColor"
-        strokeWidth="1.25"
-        className="text-white/25"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12 60 C38 22 88 10 130 14"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12 60 C38 98 88 110 130 106"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M248 60 C222 22 172 10 130 14"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      <path
+        d="M248 60 C222 98 172 110 130 106"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -91,10 +112,7 @@ export function HeroOverlapTitle({ className }: HeroOverlapTitleProps) {
       animate={shouldReveal ? "visible" : "hidden"}
     >
       <div className="hero-title__texture" aria-hidden />
-
-      <div className="hero-title__ball-wrap" aria-hidden>
-        <RugbyBallBackdrop className="hero-title__ball" />
-      </div>
+      <RugbyBallBackdrop />
 
       <Reveal className="hero-title__stage overflow-visible">
         <span className="hero-title__insertion block">L&apos;insertion</span>

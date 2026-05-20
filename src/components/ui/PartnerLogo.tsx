@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import type { Partner } from "@/data/partners";
@@ -12,22 +13,55 @@ type PartnerLogoProps = {
 
 export function PartnerLogo({ partner, className }: PartnerLogoProps) {
   const content = (
-    <div className="group flex aspect-[16/10] w-full flex-col justify-center border border-muted/70 bg-black/40 px-4 py-8 text-center">
-      <div className="mx-auto mb-6 flex h-16 w-full max-w-[200px] items-center justify-center border border-accent/35 bg-black/70 font-display text-3xl uppercase tracking-[0.4em] text-white transition duration-500 group-hover:bg-accent">
-        <span className="grayscale transition duration-500 group-hover:grayscale-0">
-          {partner.initials.slice(0, 3)}
-        </span>
+    <div className="relative">
+      <div
+        className={cn(
+          "relative z-10 overflow-hidden rounded-xl",
+          "border border-white/15 bg-white",
+          "shadow-[0_10px_28px_rgba(0,0,0,0.22)]",
+          "transition-all duration-300 ease-out",
+          "group-hover:-translate-y-0.5 group-hover:translate-x-1.5 group-hover:scale-[1.035]",
+          "group-hover:border-accent/45 group-hover:shadow-[0_18px_36px_rgba(0,0,0,0.32)]",
+          "group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-1.5 group-focus-visible:scale-[1.035]",
+          "group-focus-visible:border-accent/45 group-focus-visible:shadow-[0_18px_36px_rgba(0,0,0,0.32)]",
+        )}
+      >
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
+
+        <div className="relative aspect-[16/10] w-full overflow-hidden">
+          <div className="absolute inset-0 flex items-center justify-center p-5">
+            <Image
+              src={partner.logo}
+              alt={partner.name}
+              width={220}
+              height={80}
+              className={cn(
+                "max-h-full max-w-[88%] w-auto object-contain",
+                partner.logoClassName,
+              )}
+            />
+          </div>
+        </div>
       </div>
-      <p className="text-[11px] uppercase tracking-[0.18em] text-muted transition duration-500 group-hover:text-white">
-        {partner.name}
+
+      <p
+        className={cn(
+          "pointer-events-none absolute inset-x-0 top-full z-20 mt-3",
+          "text-center text-[11px] uppercase tracking-[0.2em] text-white",
+          "translate-y-[-120%] opacity-0",
+          "transition-all duration-300 ease-out",
+          "group-hover:translate-y-0 group-hover:opacity-100",
+          "group-focus-visible:translate-y-0 group-focus-visible:opacity-100",
+        )}
+      >
+        <span className="inline-block rounded-full border border-white/15 bg-[#242424]/95 px-3 py-1.5 shadow-lg backdrop-blur-sm">
+          {partner.name}
+        </span>
       </p>
     </div>
   );
 
-  const wrapperClasses = cn(
-    "partner-logo block grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 focus-visible:opacity-100 opacity-75",
-    className,
-  );
+  const wrapperClasses = cn("partner-logo group relative block", className);
 
   if (partner.website) {
     return (

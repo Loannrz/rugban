@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
 import type { Testimonial as TestimonialType } from "@/data/testimonials";
@@ -10,59 +9,75 @@ import { cn } from "@/lib/utils";
 
 type TestimonialCardProps = {
   testimonial: TestimonialType;
-  imageSrc?: string;
-  invert?: boolean;
+  index?: number;
+  featured?: boolean;
 };
 
 export function TestimonialCard({
   testimonial,
-  imageSrc,
-  invert,
+  index = 0,
+  featured = false,
 }: TestimonialCardProps) {
   const reducedMotion = useReducedMotion() === true;
   const narrowMotion = useIsNarrowMotion();
+  const displayIndex = String(index + 1).padStart(2, "0");
 
   return (
     <motion.figure
       variants={fadeUp({ reducedMotion, narrowMotion })}
       className={cn(
-        "relative overflow-hidden border border-white/14 bg-black/70 p-10",
-        invert && "bg-white border-black/10 text-ink",
+        "group relative overflow-hidden border border-white/12 bg-gradient-to-br from-[#161616] via-[#101010] to-black",
+        "transition-colors duration-500 hover:border-accent/35",
+        featured ? "lg:col-span-2" : "",
       )}
     >
-      <span
+      <div
         aria-hidden
-        className="pointer-events-none absolute inset-12 font-display text-[160px] leading-none text-accent/10 lg:text-[200px]"
+        className="absolute left-0 top-0 h-full w-[3px] bg-white/10 transition-colors duration-500 group-hover:bg-accent"
+      />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-4 top-4 font-display text-[7rem] leading-none text-white/[0.04] transition-colors duration-500 group-hover:text-accent/10 lg:text-[9rem]"
       >
-        ”
-      </span>
-      <div className="relative z-10 flex flex-col gap-10 lg:flex-row lg:items-center">
-        <div className="relative h-52 w-full max-w-[220px] border border-accent/35 bg-muted/10">
-          {imageSrc ? (
-            <Image
-              fill
-              src={imageSrc}
-              alt={`Portrait représentatif de ${testimonial.author}`}
-              className="object-cover grayscale"
-              sizes="220px"
-            />
-          ) : (
-            <div className="flex h-full items-center justify-center font-display text-6xl uppercase text-accent/40">
-              {testimonial.initials}
-            </div>
-          )}
-        </div>
-        <div className="space-y-6">
-          <blockquote className="text-lg lg:text-xl">
-            « {testimonial.quote} »
-          </blockquote>
-          <figcaption className="text-sm uppercase tracking-[0.26em] text-muted">
-            {testimonial.author} —{" "}
-            <span className={invert ? "text-ink/80" : "text-accent"}>
-              {testimonial.role}
-            </span>
-          </figcaption>
-        </div>
+        {displayIndex}
+      </div>
+
+      <div className="relative z-10 space-y-8 p-8 text-left lg:p-10">
+        <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
+          <span aria-hidden className="h-px w-8 bg-accent/70" />
+          Témoignage {displayIndex}
+        </span>
+
+        <blockquote className="max-w-3xl text-left text-[clamp(1.125rem,2.2vw,1.45rem)] leading-relaxed text-white/92">
+          <span
+            aria-hidden
+            className="mr-1 font-display text-4xl leading-none text-accent/80"
+          >
+            «
+          </span>
+          {testimonial.quote}
+          <span
+            aria-hidden
+            className="ml-1 font-display text-4xl leading-none text-accent/80"
+          >
+            »
+          </span>
+        </blockquote>
+
+        <figcaption className="flex flex-wrap items-center justify-start gap-4 border-t border-white/10 pt-6 text-left">
+          <div>
+            <p className="font-display text-2xl uppercase tracking-[0.08em] text-white">
+              {testimonial.author}
+            </p>
+            <p className="mt-1 text-xs uppercase tracking-[0.22em] text-muted">
+              Parcours Prépa Sport
+            </p>
+          </div>
+          <span className="rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            {testimonial.role}
+          </span>
+        </figcaption>
       </div>
     </motion.figure>
   );

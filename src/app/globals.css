@@ -150,10 +150,23 @@
     }
   }
 
+  .hero-title__ball {
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    z-index: 1;
+    width: min(92vw, 46rem);
+    height: auto;
+    color: rgba(210, 214, 222, 0.17);
+    pointer-events: none;
+    translate: -50% -50%;
+    rotate: -22deg;
+  }
+
   .hero-title {
     position: relative;
     isolation: isolate;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-title__texture {
@@ -164,31 +177,6 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     mix-blend-mode: soft-light;
-  }
-
-  .hero-title__ball-wrap {
-    position: absolute;
-    inset: -20% -10%;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-  }
-
-  .hero-title__ball {
-    width: clamp(12rem, 72vw, 18rem);
-    height: auto;
-    transform: rotate(-22deg);
-    opacity: 0.12;
-    filter: blur(0.3px);
-  }
-
-  @media (min-width: 1024px) {
-    .hero-title__ball {
-      width: clamp(16rem, 48vw, 32rem);
-      opacity: 0.14;
-    }
   }
 
   .hero-title__stage {

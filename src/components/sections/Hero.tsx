@@ -47,8 +47,8 @@ export function HeroSection() {
           </ViewportReveal>
         </div>
 
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-1 py-6 sm:py-8 lg:pointer-events-none lg:absolute lg:inset-0 lg:px-0 lg:py-0">
-          <HeroOverlapTitle className="pointer-events-auto w-full max-w-full text-center lg:-translate-y-[6vh]" />
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center overflow-visible px-1 py-6 sm:py-8 lg:pointer-events-none lg:absolute lg:inset-0 lg:px-0 lg:py-0">
+          <HeroOverlapTitle className="pointer-events-auto relative z-10 w-full max-w-full text-center lg:-translate-y-[6vh]" />
         </div>
 
         <div className="relative z-20 mt-auto shrink-0 lg:absolute lg:inset-x-0 lg:bottom-0">

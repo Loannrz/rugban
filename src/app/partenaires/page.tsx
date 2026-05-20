@@ -51,7 +51,7 @@ export default function PartenairesPage() {
         <div className="container-site space-y-16">
           <div className="space-y-12">
             <h2 className="font-display text-clamp-h2 uppercase">Réseau financier officiel IDF</h2>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 overflow-visible md:grid-cols-3">
               {institutionnels.map((partner) => (
                 <PartnerLogo key={`inst-${partner.id}`} partner={partner} />
               ))}
@@ -60,7 +60,7 @@ export default function PartenairesPage() {
 
           <div className="space-y-12">
             <h2 className="text-xs uppercase tracking-[0.38em] text-muted">Financements privés</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 overflow-visible md:grid-cols-2 lg:grid-cols-4">
               {prives.map((partner) => (
                 <PartnerLogo key={`priv-${partner.id}`} partner={partner} />
               ))}
