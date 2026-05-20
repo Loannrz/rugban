@@ -27,15 +27,33 @@ export const prepaSportHighlights = [
 
 export const taxeApprentissageBlocks = [
   {
+    id: "siret",
     title: "SIRET de l'association",
     body: "Le SIRET et les références administratives sont communiqués sur demande des services finance lors de votre démarche officielle avec notre équipe.",
   },
   {
+    id: "soltea",
     title: "Passerelles SOLTÉA et calendrier 2025",
     body: "La collecte passe par vos référents RH régionaux. Sollicitez l'équipe RUGBAN pour recevoir le lien SOLTÉA actif ainsi que la fenêtre officielle avant la clôture 2025 fixée selon vos procédures internes.",
   },
   {
+    id: "calcul",
     title: "Comment est calculée la contribution ?",
     body: "Le pourcentage de masse salariale concernée est défini réglementairement ; votre accountant calcule automatiquement le montant attribuable puis vous choisissez l'association bénéficiaire.",
   },
-];
+] as const;
+
+export const taxeApprentissageCalendar = [
+  {
+    period: "Janvier – Février",
+    text: "Mise à jour des dossiers financiers RH internes.",
+  },
+  {
+    period: "Mars – Avril",
+    text: "Collecte officielle régionale via SOLTÉA.",
+  },
+  {
+    period: "Avant fin juillet",
+    text: "Validations bancaires envoyées aux associations lauréates choisies.",
+  },
+] as const;

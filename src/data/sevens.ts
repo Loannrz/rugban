@@ -21,6 +21,12 @@ export const palmarès = [
 export const rugbanSevensParagraph =
   "L'équipe élite féminine RUGBAN 7s rassemble des joueuses engagées à l'Athletic Club Bobigny et au Stade Français Paris. Une dynamique nationale qui porte nos valeurs d'exigence, de solidarité et d'élargissement du public féminin sur le rugby à VII.";
 
+export const teamIdentityPoints = [
+  "Joueur·euses agrégées depuis AC Bobigny & Stade Français Paris",
+  "Jeu direct, jeu couvert défensif, culture retour spectacle",
+  "Coaching dirigé depuis le staff associative + club partenaires",
+] as const;
+
 export const hintonArticle = {
   title: "Une saison écrite comme une montée en puissance",
   subtitle:
