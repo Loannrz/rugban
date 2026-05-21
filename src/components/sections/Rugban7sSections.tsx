@@ -65,7 +65,7 @@ export function Rugban7sPalmarèsSection() {
                   <span
                     aria-hidden
                     className={cn(
-                      "absolute -left-[1.85rem] top-2 h-3 w-3 rounded-full border-2 bg-black",
+                      "absolute -left-7 top-2 h-3 w-3 -translate-x-1/2 rounded-full border-2 bg-black",
                       "highlight" in entry && entry.highlight
                         ? "border-lime bg-lime/20"
                         : "border-accent",

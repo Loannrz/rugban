@@ -143,8 +143,8 @@ export function InsertionPasserelles() {
                       aria-hidden
                       className={
                         day.accent === "accent"
-                          ? "absolute -left-[1.65rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-accent bg-black"
-                          : "absolute -left-[1.65rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-lime bg-black"
+                          ? "absolute -left-6 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-accent bg-black"
+                          : "absolute -left-6 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-lime bg-black"
                       }
                     />
                     <p className="text-base leading-relaxed text-muted">{item}</p>
@@ -209,8 +209,8 @@ export function InsertionPasserelles() {
         <ViewportReveal variants={fadeUp(motionPrefs)}>
           <div className="flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-10 sm:flex-row sm:items-center">
             <p className="max-w-2xl text-base leading-relaxed text-muted">
-              Besoin d&apos;un contact terrain rapide&nbsp;? Rendez-vous aussi sur le
-              formulaire officiel multi-profils.
+              Besoin d&apos;un contact terrain rapide&nbsp;? Appelez ou écrivez
+              directement à l&apos;équipe permanente.
             </p>
             <Link
               prefetch={false}

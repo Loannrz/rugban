@@ -3,7 +3,6 @@
 import type { PropsWithChildren } from "react";
 
 import { CustomCursor } from "./CustomCursor";
-import { PageTransitionBridge } from "./PageTransition";
 import { SiteEntranceLoader } from "./SiteEntranceLoader";
 
 export function AppProviders({ children }: PropsWithChildren) {
@@ -11,7 +10,7 @@ export function AppProviders({ children }: PropsWithChildren) {
     <>
       <SiteEntranceLoader />
       <CustomCursor />
-      <PageTransitionBridge>{children}</PageTransitionBridge>
+      {children}
     </>
   );
 }

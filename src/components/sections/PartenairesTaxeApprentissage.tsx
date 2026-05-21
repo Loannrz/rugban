@@ -144,7 +144,7 @@ export function PartenairesTaxeApprentissageSection() {
                   <li key={step.period} className="relative pb-8 last:pb-0">
                     <span
                       aria-hidden
-                      className="absolute -left-[1.85rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-lime bg-black"
+                      className="absolute -left-7 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full border-2 border-lime bg-black"
                     />
                     <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
                       Étape {String(index + 1).padStart(2, "0")}

@@ -48,7 +48,7 @@ export const idfTerritories: IdfTerritory[] = [
     labelX: 402,
     labelY: 102,
     description:
-      "Coupe des quartiers, Rugban Underground et relais vers les EPT du nord-est.",
+      "Coupe des quartiers, rugby quartiers et relais vers les EPT du nord-est.",
   },
   {
     id: "seine-et-marne",
@@ -72,7 +72,7 @@ export const idfTerritories: IdfTerritory[] = [
     labelX: 402,
     labelY: 354,
     description:
-      "Festivals de quartiers, Ovalie Girls et tournois scolaires sud-est francilien.",
+      "Rugby quartiers, Ovalie Girls et tournois scolaires sud-est francilien.",
   },
   {
     id: "essonne",

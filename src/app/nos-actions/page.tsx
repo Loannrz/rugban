@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageHero } from "@/components/layout/PageHero";
+import { NosActionsAudiencesSection } from "@/components/sections/NosActionsAudiencesSection";
 import { NosActionsIntro } from "@/components/sections/NosActionsIntro";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { ProgramCard } from "@/components/ui/ProgramCard";
@@ -10,9 +11,9 @@ import { programs } from "@/data/programs";
 import { buildMetadata } from "@/lib/siteMetadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Nos actions",
+  title: "Actions citoyennes",
   description:
-    "Découvre les sept programmes urbains franciliens de Rugby Urban Attitude et la carte indicative des mobilisations depuis 2006.",
+    "Rugby quartiers, Coupe des quartiers, Rugby Collège Citoyen, Coupe des collèges et Ovalie Girls : les actions citoyennes de Rugby Urban Attitude en Île-de-France.",
   path: "/nos-actions",
 });
 
@@ -20,11 +21,11 @@ export default function NosActionsPage() {
   return (
     <>
       <PageHero
-        title="NOS ACTIONS"
-        eyebrow="Réseau urbain francilien"
+        title="Actions citoyennes"
+        eyebrow="Sport citoyen francilien"
         breadcrumbs={[
           { label: "Accueil", href: "/" },
-          { label: "Nos actions" },
+          { label: "Actions citoyennes" },
         ]}
       />
 
@@ -32,10 +33,15 @@ export default function NosActionsPage() {
 
       <section className="section-y border-t border-muted/25 bg-black text-white">
         <div className="container-site space-y-12">
-          <SectionLabel label="grille projet" />
+          <SectionLabel label="Programmes" />
           <h2 className="font-display text-clamp-h2 uppercase tracking-[0.02em] text-white">
-            Les sept programmes développés
+            Cinq grands axes d&apos;actions citoyennes
           </h2>
+          <p className="max-w-3xl text-base leading-relaxed text-muted">
+            Des actions de proximité dans les quartiers aux grands événements
+            scolaires et fédérateurs, structurées pour gagner en visibilité et
+            en cohérence sur l&apos;ensemble du territoire francilien.
+          </p>
           <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
             {programs.map((programme) => (
               <ProgramCard key={programme.id} program={programme} />
@@ -43,10 +49,12 @@ export default function NosActionsPage() {
           </div>
 
           <CTAButton href="/contact" uppercase={false}>
-            Prévenir un projet partenaires
+            Proposer un partenariat
           </CTAButton>
         </div>
       </section>
+
+      <NosActionsAudiencesSection />
     </>
   );
 }

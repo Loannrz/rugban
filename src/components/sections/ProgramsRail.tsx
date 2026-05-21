@@ -27,7 +27,7 @@ export function ProgramsRailSection() {
             variants={fadeUp({ reducedMotion, narrowMotion })}
             className="font-display text-clamp-h2 uppercase text-white"
           >
-            7 programmes, un seul objectif
+            5 programmes, un seul objectif
           </motion.h2>
         </ViewportReveal>
       </div>

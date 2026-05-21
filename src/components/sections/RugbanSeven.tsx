@@ -67,18 +67,21 @@ export function RugbanSevenSection() {
 
           <ViewportReveal variants={staggerContainer(reducedMotion, 0.06)}>
             <div className="grid gap-3 sm:grid-cols-2">
-              {palmarès.map((item) => (
+              {palmarès.map((item) => {
+                const isHighlight = "highlight" in item && item.highlight;
+
+                return (
                 <motion.article
                   key={item.year}
                   variants={fadeUp({ reducedMotion, narrowMotion })}
                   className={cn(
                     "relative flex flex-col gap-3 border p-5 transition-colors",
-                    item.highlight
+                    isHighlight
                       ? "border-accent bg-gradient-to-br from-accent/15 via-white to-white shadow-[0_12px_40px_rgba(255,107,53,0.12)]"
                       : "border-black/12 bg-white/60 hover:border-black/25",
                   )}
                 >
-                  {item.highlight ? (
+                  {isHighlight ? (
                     <span
                       aria-hidden
                       className="absolute -right-1 -top-1 flex h-8 w-8 items-center justify-center bg-accent text-ink"
@@ -89,7 +92,7 @@ export function RugbanSevenSection() {
                   <p
                     className={cn(
                       "font-display leading-none",
-                      item.highlight ? "text-5xl text-accent" : "text-4xl text-ink/90",
+                      isHighlight ? "text-5xl text-accent" : "text-4xl text-ink/90",
                     )}
                   >
                     {item.year}
@@ -97,13 +100,14 @@ export function RugbanSevenSection() {
                   <p
                     className={cn(
                       "text-xs uppercase leading-relaxed tracking-[0.2em]",
-                      item.highlight ? "font-semibold text-ink" : "text-ink/75",
+                      isHighlight ? "font-semibold text-ink" : "text-ink/75",
                     )}
                   >
                     {item.line}
                   </p>
                 </motion.article>
-              ))}
+              );
+              })}
             </div>
           </ViewportReveal>
 

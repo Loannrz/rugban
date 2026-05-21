@@ -37,10 +37,11 @@ export function NosActionsIntro() {
               variants={fadeUp({ reducedMotion, narrowMotion })}
               className="max-w-2xl text-sm leading-relaxed text-muted lg:col-span-7 lg:text-[15px]"
             >
-              Nous combinons événements de masse couvrant 12 métropoles, tournois
-              scolaires, sessions culturelles urbaines et dispositifs
-              d&apos;insertion avancée. Une boucle fermée reliant club pro,
-              chantiers associatifs et classes collégiennes.
+              Nous combinons actions de quartier, tournois inter-territoires,
+              événements scolaires et dispositifs d&apos;insertion. Une boucle
+              reliant le sport citoyen, les classes collégiennes et les
+              passerelles professionnelles portées par Rugby Urban Attitude
+              depuis 2006.
             </motion.p>
           </div>
         </ViewportReveal>

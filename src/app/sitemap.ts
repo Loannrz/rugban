@@ -7,6 +7,8 @@ const routes = [
   "/prepa-sport",
   "/nos-actions",
   "/insertion",
+  "/sport-sante",
+  "/formation",
   "/rugban-7s",
   "/partenaires",
   "/contact",

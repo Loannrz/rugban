@@ -4,8 +4,10 @@ export type NavItem = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Actions", href: "/nos-actions" },
+  { label: "Actions citoyennes", href: "/nos-actions" },
   { label: "Insertion", href: "/insertion" },
+  { label: "Sport santé", href: "/sport-sante" },
+  { label: "Formation", href: "/formation" },
   { label: "Rugban 7s", href: "/rugban-7s" },
   { label: "Partenaires", href: "/partenaires" },
   { label: "Contact", href: "/contact" },

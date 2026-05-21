@@ -43,6 +43,24 @@ export const taxeApprentissageBlocks = [
   },
 ] as const;
 
+export const remobilisationBlocks = [
+  {
+    id: "structures",
+    title: "Structures spécifiques",
+    text: "Établissements médico-sociaux, centres de placement, structures éducatives spécialisées : des séances de rugby et de remobilisation adaptées aux publics accueillis.",
+  },
+  {
+    id: "methodologie",
+    title: "Mise en mouvement encadrée",
+    text: "Ateliers sportifs, jeux collectifs et travail sur la confiance en soi, la régularité et le respect des règles communes.",
+  },
+  {
+    id: "passerelles",
+    title: "Lien avec l'insertion",
+    text: "Lorsque le public le permet, orientation vers la Passe D ou la Prépa Sport pour prolonger la trajectoire au-delà de l'action ponctuelle.",
+  },
+] as const;
+
 export const taxeApprentissageCalendar = [
   {
     period: "Janvier – Février",

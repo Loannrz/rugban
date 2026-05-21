@@ -7,6 +7,7 @@ import "./globals.css";
 import { AppProviders } from "@/components/layout/AppProviders";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { PageTransitionBridge } from "@/components/layout/PageTransition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rugby Urban Attitude",
     description:
-      "Association loi 1901 qui déploie 7 programmes d'animation et d'orientation sur 6 départements.",
+      "Association loi 1901 : actions citoyennes, insertion professionnelle, Sport Santé et Rugban 7s en Île-de-France.",
   },
   alternates: {
     canonical: "/",
@@ -63,7 +64,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${bebas.variable} bg-black antialiased`}>
         <AppProviders>
           <Navbar />
-          <main className="min-h-screen min-w-0 overflow-x-clip">{children}</main>
+          <PageTransitionBridge>
+            <main className="min-h-screen min-w-0 overflow-x-clip">{children}</main>
+          </PageTransitionBridge>
           <Footer />
         </AppProviders>
       </body>
