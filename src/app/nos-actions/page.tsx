@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 
 import { PageHero } from "@/components/layout/PageHero";
+import { FinaleJuunesSection } from "@/components/sections/FinaleJuunes";
+import { ImpactNumeriqueSection } from "@/components/sections/ImpactNumerique";
 import { NosActionsAudiencesSection } from "@/components/sections/NosActionsAudiencesSection";
 import { NosActionsIntro } from "@/components/sections/NosActionsIntro";
+import { TemoignagesSection } from "@/components/sections/TemoignagesSection";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { ProgramCard } from "@/components/ui/ProgramCard";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -55,6 +58,10 @@ export default function NosActionsPage() {
       </section>
 
       <NosActionsAudiencesSection />
+
+      <ImpactNumeriqueSection />
+      <TemoignagesSection />
+      <FinaleJuunesSection />
     </>
   );
 }

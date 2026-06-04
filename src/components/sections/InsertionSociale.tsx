@@ -203,7 +203,7 @@ export function InsertionSocialeSection() {
             </div>
 
             <p className="relative text-sm uppercase tracking-[0.22em] text-white/90">
-              16-25 ans, situation NEET • deux sessions gratuites / an
+              16-25 ans, situation NEET • une session gratuite / an
             </p>
 
             <div className="relative grid grid-cols-3 gap-3">

@@ -26,8 +26,8 @@ export const heroStats: StatItem[] = [
   },
   {
     id: "sessions-prepa",
-    value: 2,
-    label: "Sessions Prépa Sport / an",
+    value: 1,
+    label: "Session Prépa Sport / an",
   },
 ];
 

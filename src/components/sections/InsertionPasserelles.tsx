@@ -50,7 +50,7 @@ export function InsertionPasserelles() {
 
       <div className="container-site relative space-y-16 lg:space-y-20">
         <ViewportReveal staggerChildren>
-          <div className="max-w-3xl space-y-6">
+          <div className="w-full space-y-6">
             <motion.div variants={fadeUp(motionPrefs)}>
               <SectionLabel label="Passe D" />
             </motion.div>
@@ -60,15 +60,34 @@ export function InsertionPasserelles() {
             >
               Journées immersion
             </motion.h2>
-            <motion.p
-              variants={fadeUp(motionPrefs)}
-              className="text-base leading-relaxed text-muted lg:text-lg"
-            >
-              Deux journées hors les murs : les jeunes rejoignent d&apos;abord une
-              structure professionnelle nationale pour comprendre l&apos;exigence de
-              la fonction publique associative, puis un chantier vivant où se joue
-              la mise en oeuvre événementielle.
-            </motion.p>
+            <div className="space-y-5">
+              <motion.p
+                variants={fadeUp(motionPrefs)}
+                className="text-base leading-relaxed text-muted lg:text-lg"
+              >
+                À travers nos Journées Immersion, nous permettons aux jeunes de
+                découvrir des univers professionnels grâce à nos partenaires. Une
+                structure professionnelle dans le monde du sport (Stade Français
+                Paris / Racing 92) et une structure professionnelle dans le monde
+                du BTP ou autre domaine.
+              </motion.p>
+              <motion.p
+                variants={fadeUp(motionPrefs)}
+                className="text-base leading-relaxed text-muted lg:text-lg"
+              >
+                Durant deux journées, ils rencontrent des professionnels, visitent
+                des structures de référence et échangent sur les réalités du monde
+                du travail. Ces expériences concrètes favorisent l&apos;ouverture, la
+                curiosité et la construction d&apos;un projet d&apos;avenir.
+              </motion.p>
+              <motion.p
+                variants={fadeUp(motionPrefs)}
+                className="text-base leading-relaxed text-muted lg:text-lg"
+              >
+                Chaque immersion est conçue comme une étape vers l&apos;engagement,
+                la curiosité et l&apos;insertion professionnelle.
+              </motion.p>
+            </div>
             <motion.p
               variants={fadeUp(motionPrefs)}
               className="inline-flex border border-white/15 bg-white/[0.03] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/80"
@@ -178,7 +197,7 @@ export function InsertionPasserelles() {
                   Passerelle suivante
                 </h3>
                 <p className="text-sm uppercase tracking-[0.2em] text-white/75">
-                  16–25 ans · deux sessions gratuites par an
+                  16–25 ans · une session gratuite par an
                 </p>
               </div>
 

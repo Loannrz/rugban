@@ -140,16 +140,6 @@
     scroll-snap-align: start;
   }
 
-  .cursor-none-desktop {
-    cursor: none;
-  }
-
-  @media (hover: none), (pointer: coarse) {
-    .cursor-none-desktop {
-      cursor: auto;
-    }
-  }
-
   .hero-title__ball {
     position: absolute;
     left: 50%;

@@ -20,33 +20,71 @@ export function NosActionsIntro() {
         className="pointer-events-none absolute -left-20 top-1/4 h-64 w-64 rounded-full bg-accent/8 blur-[100px]"
       />
 
-      <div className="container-site relative space-y-10 lg:space-y-12">
-        <ViewportReveal staggerChildren>
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-12">
-            <motion.div
-              variants={fadeUp({ reducedMotion, narrowMotion })}
-              className="space-y-5 lg:col-span-5"
-            >
+      <div className="container-site relative flex flex-col gap-10 lg:gap-14">
+        <ViewportReveal staggerChildren className="w-full">
+          <div className="w-full space-y-6 lg:space-y-8">
+            <motion.div variants={fadeUp({ reducedMotion, narrowMotion })}>
               <SectionLabel label="Résumé projet" />
-              <h2 className="font-display text-[clamp(1.75rem,4vw,3rem)] uppercase leading-[0.95] text-white">
-                Un maillage francilien depuis 2006
-              </h2>
             </motion.div>
 
-            <motion.p
+            <motion.h2
               variants={fadeUp({ reducedMotion, narrowMotion })}
-              className="max-w-2xl text-sm leading-relaxed text-muted lg:col-span-7 lg:text-[15px]"
+              className="font-display text-[clamp(1.75rem,4vw,3rem)] uppercase leading-[0.95] text-white"
             >
-              Nous combinons actions de quartier, tournois inter-territoires,
-              événements scolaires et dispositifs d&apos;insertion. Une boucle
-              reliant le sport citoyen, les classes collégiennes et les
-              passerelles professionnelles portées par Rugby Urban Attitude
-              depuis 2006.
-            </motion.p>
+              Un maillage francilien depuis 2006
+            </motion.h2>
+
+            <div className="space-y-6">
+              <motion.p
+                variants={fadeUp({ reducedMotion, narrowMotion })}
+                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
+              >
+                Depuis 2008, Rugby Urban Attitude utilise le rugby comme un
+                levier d&apos;éducation, d&apos;inclusion et d&apos;émancipation
+                auprès des jeunes issus des Quartiers Prioritaires de la Ville
+                en Île-de-France, mais également auprès de l&apos;ensemble des
+                publics que nous accompagnons.
+              </motion.p>
+              <motion.p
+                variants={fadeUp({ reducedMotion, narrowMotion })}
+                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
+              >
+                À travers des animations gratuites, des événements sportifs,
+                des actions citoyennes et des parcours d&apos;insertion, nous
+                accompagnons chaque année plusieurs milliers de jeunes dans leur
+                développement personnel et leur ouverture vers de nouvelles
+                perspectives.
+              </motion.p>
+              <motion.p
+                variants={fadeUp({ reducedMotion, narrowMotion })}
+                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
+              >
+                Notre ambition est simple : transmettre les valeurs du rugby
+                pour favoriser le vivre-ensemble, démocratiser la pratique
+                sportive, renforcer la confiance en soi et contribuer à la
+                construction de parcours d&apos;avenir.
+              </motion.p>
+              <motion.p
+                variants={fadeUp({ reducedMotion, narrowMotion })}
+                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
+              >
+                Notre public principal est constitué de collégiens, mais nous
+                intervenons également de manière importante auprès des écoles
+                primaires.
+              </motion.p>
+              <motion.p
+                variants={fadeUp({ reducedMotion, narrowMotion })}
+                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
+              >
+                Nous souhaitons développer davantage les actions à destination des
+                plus de 16 ans afin de créer davantage de passerelles entre nos
+                actions sportives, citoyennes et le dispositif Prépa Sport.
+              </motion.p>
+            </div>
           </div>
         </ViewportReveal>
 
-        <ViewportReveal>
+        <ViewportReveal className="w-full">
           <IdfInteractiveMap />
         </ViewportReveal>
       </div>

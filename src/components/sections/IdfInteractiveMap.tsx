@@ -176,7 +176,7 @@ function useConnectorPath(
 
 export function IdfInteractiveMap() {
   const reducedMotion = useReducedMotion() === true;
-  const [activeId, setActiveId] = useState<string>("paris");
+  const [activeId, setActiveId] = useState<string>("hauts-de-seine");
   const [connectorEnabled, setConnectorEnabled] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const mapSvgRef = useRef<SVGSVGElement>(null);
@@ -242,7 +242,7 @@ export function IdfInteractiveMap() {
 
         <div
           className="relative flex min-h-[360px] flex-col p-4 sm:p-6 lg:min-h-[480px]"
-          onMouseLeave={() => setActiveId("paris")}
+          onMouseLeave={() => setActiveId("hauts-de-seine")}
         >
           <div className="mb-3 flex shrink-0 items-start justify-between gap-4">
             <div>
@@ -366,7 +366,7 @@ export function IdfInteractiveMap() {
                 <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-lime">
                   {active.city}
                 </p>
-                <p className="mt-5 max-w-md text-sm leading-relaxed text-muted">
+                <p className="mt-5 text-sm leading-relaxed text-muted">
                   {active.description}
                 </p>
 

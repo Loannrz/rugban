@@ -22,9 +22,8 @@ export const idfTerritories: IdfTerritory[] = [
     y: 228,
     labelX: 280,
     labelY: 256,
-    isHub: true,
     description:
-      "Siège associatif, lab pédagogiques et relais vers l'ensemble du réseau francilien.",
+      "Actions inter-quartiers, Festival des Quartiers et Coupe des Quartiers.",
   },
   {
     id: "val-doise",
@@ -36,7 +35,7 @@ export const idfTerritories: IdfTerritory[] = [
     labelX: 280,
     labelY: 52,
     description:
-      "Maillage nord francilien, relais Mission Locale et sessions en territoires périurbains.",
+      "Actions inter-quartiers, Centre de loisirs de la Police nationale et Coupe des Quartiers.",
   },
   {
     id: "seine-saint-denis",
@@ -48,7 +47,7 @@ export const idfTerritories: IdfTerritory[] = [
     labelX: 402,
     labelY: 102,
     description:
-      "Coupe des quartiers, rugby quartiers et relais vers les EPT du nord-est.",
+      "Événements inter-quartiers, Festival des Quartiers et Coupe des Quartiers.",
   },
   {
     id: "seine-et-marne",
@@ -90,13 +89,14 @@ export const idfTerritories: IdfTerritory[] = [
     id: "hauts-de-seine",
     name: "Hauts-de-Seine",
     code: "92",
-    city: "Courbevoie · Nanterre",
+    city: "Courbevoie",
     x: 188,
     y: 268,
     labelX: 152,
     labelY: 278,
+    isHub: true,
     description:
-      "Rugby Collège Citoyen, classes suivies et interventions en milieu ouvert ouest parisien.",
+      "Siège de l'association à Courbevoie. Mise en œuvre des projets Coupe des Collèges, Rugby Collège Citoyen, Projet Paul Lapie, interventions en milieu carcéral, événements inter-quartiers, Festival des Quartiers et Coupe des Quartiers.",
   },
   {
     id: "yvelines",
@@ -108,6 +108,6 @@ export const idfTerritories: IdfTerritory[] = [
     labelX: 82,
     labelY: 338,
     description:
-      "Coupe des collèges, clubs partenaires et interventions vers l'axe ouest francilien.",
+      "Participation à différents projets scolaires et associatifs, événements inter-quartiers et Coupe des Quartiers.",
   },
 ];

@@ -30,23 +30,26 @@ export function PrepaSportIntroSection() {
           className="flex flex-col justify-center lg:col-span-7"
         >
           <SectionLabel label="Prépa sport" />
-          <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] uppercase leading-[0.92]">
-            Passerelles vers l&apos;emploi public et privé
+          <h2 className="mt-4 font-display text-[clamp(1.65rem,4vw,2.75rem)] uppercase leading-[0.92]">
+            Prépa Sport : le sport comme tremplin vers l&apos;avenir dans les
+            métiers du sport et de l&apos;animation
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted lg:text-lg">
-            Depuis plusieurs cycles, nous accompagnons un public jeune très mobile
-            entre les différents dispositifs urbains franciliens. La Prépa Sport
-            reste gratuit intégralement et décline nos valeurs territoriales
-            jusqu&apos;au diplôme.
-          </p>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-            Une promo type compte jusqu&apos;à vingt-cinq volontaires, alternant
-            cours magistraux ludiques et mises en situation professionnelles
-            encadrées.
-          </p>
+          <div className="mt-6 space-y-5">
+            <p className="text-base leading-relaxed text-muted lg:text-lg">
+              Prépa Sport accompagne les jeunes de 16 à 25 ans dans la
+              construction de leur projet professionnel grâce à une pédagogie
+              basée sur le sport, l&apos;engagement collectif et la découverte
+              des métiers du sport et de l&apos;animation.
+            </p>
+            <p className="text-base leading-relaxed text-muted lg:text-lg">
+              Chaque promotion réunit jusqu&apos;à 25 jeunes avec un objectif
+              clair : accéder à une formation qualifiante, un emploi ou un
+              parcours professionnel choisi.
+            </p>
+          </div>
 
           <ul className="mt-10 flex flex-wrap gap-3">
-            {["100 % gratuit", "16–25 ans", "2 sessions / an"].map((tag) => (
+            {["100 % gratuit", "16–25 ans", "1 session / an"].map((tag) => (
               <li
                 key={tag}
                 className="border border-white/15 bg-white/[0.03] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/75"

@@ -22,7 +22,7 @@ export default function PrepaSportPage() {
     <>
       <PageHero
         title="PRÉPA SPORT"
-        eyebrow="Deux cohortes saisonnières"
+        eyebrow="Une session par an"
         breadcrumbs={[
           { label: "Accueil", href: "/" },
           { label: "Prépa sport" },
