@@ -1,7 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { GraduationCap, Users } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ViewportReveal } from "@/components/ui/ViewportReveal";
@@ -60,7 +63,19 @@ export function PrepaSportIntroSection() {
           </ul>
         </ViewportReveal>
 
-        <ViewportReveal variants={fadeRight(motionPrefs)} className="lg:col-span-5">
+        <ViewportReveal variants={fadeRight(motionPrefs)} className="flex flex-col gap-6 lg:col-span-5">
+          <div className="relative min-h-[240px] overflow-hidden border border-white/15 lg:min-h-[280px]">
+            <Image
+              src={siteImages.prepaSportSession.src}
+              alt={siteImages.prepaSportSession.alt}
+              fill
+              sizes="(min-width: 1024px) 480px, 100vw"
+              className="object-cover"
+              quality={82}
+            />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+          </div>
+
           <aside className="relative h-full overflow-hidden border border-accent/40 bg-gradient-to-br from-blue-dark via-[#0f2848] to-black p-8 lg:p-10">
             <div
               aria-hidden

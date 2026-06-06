@@ -62,7 +62,7 @@ export const partners: Partner[] = [
     id: "terideal",
     name: "TERIDEAL",
     initials: "TR",
-    logo: "/partners/terideal.png",
+    logo: "/partners/terideal.jpg",
     category: "private",
   },
   {

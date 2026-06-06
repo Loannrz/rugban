@@ -1,6 +1,9 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+
+import { siteImages } from "@/data/siteImages";
 
 import { fadeUp } from "@/lib/animations";
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
@@ -85,6 +88,27 @@ export function NosActionsIntro() {
         </ViewportReveal>
 
         <ViewportReveal className="w-full">
+          <div className="mb-10 grid gap-4 sm:grid-cols-3">
+            {[
+              siteImages.actionsJeunes,
+              siteImages.actionsQuartiers,
+              siteImages.actionsMandela,
+            ].map((image) => (
+              <div
+                key={image.src}
+                className="relative min-h-[220px] overflow-hidden border border-white/12 sm:min-h-[260px]"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-cover"
+                  quality={80}
+                />
+              </div>
+            ))}
+          </div>
           <IdfInteractiveMap />
         </ViewportReveal>
       </div>

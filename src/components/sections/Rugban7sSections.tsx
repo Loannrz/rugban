@@ -1,7 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { Quote, Shield, Trophy, Users } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ViewportReveal } from "@/components/ui/ViewportReveal";
@@ -107,8 +110,23 @@ export function Rugban7sPalmarèsSection() {
 
         <ViewportReveal
           variants={fadeRight(motionPrefs)}
-          className="flex flex-col justify-center lg:col-span-7 lg:pl-4"
+          className="flex flex-col justify-center gap-8 lg:col-span-7 lg:pl-4"
         >
+          <div className="relative min-h-[280px] overflow-hidden border border-white/12 lg:min-h-[340px]">
+            <Image
+              src={siteImages.rugban7sTerrain.src}
+              alt={siteImages.rugban7sTerrain.alt}
+              fill
+              sizes="(min-width: 1024px) 760px, 100vw"
+              className="object-cover"
+              quality={82}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10"
+            />
+          </div>
+
           <SectionLabel label="Identité de l'équipe" />
           <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.25rem)] uppercase leading-[0.95]">
             Élite nationale à VII

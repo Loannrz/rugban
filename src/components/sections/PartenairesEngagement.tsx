@@ -1,7 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { BarChart3, MapPinned, Sparkles } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 import type { LucideIcon } from "lucide-react";
 
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -140,6 +143,31 @@ export function PartenairesEngagementSection() {
               Trois leviers concrets pour relier vos objectifs institutionnels ou
               corporate à un réseau sportif francilien reconnu depuis 2006.
             </motion.p>
+          </div>
+        </ViewportReveal>
+
+        <ViewportReveal variants={fadeUp(motionPrefs)}>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="relative min-h-[240px] overflow-hidden border border-white/12 sm:min-h-[280px]">
+              <Image
+                src={siteImages.partenaireRazel.src}
+                alt={siteImages.partenaireRazel.alt}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
+            <div className="relative min-h-[240px] overflow-hidden border border-white/12 sm:min-h-[280px]">
+              <Image
+                src={siteImages.partenaireSuez.src}
+                alt={siteImages.partenaireSuez.alt}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
           </div>
         </ViewportReveal>
 

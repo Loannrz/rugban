@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, MapPin, Route } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { CTAButton } from "@/components/ui/CTAButton";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -94,6 +97,31 @@ export function InsertionPasserelles() {
             >
               Collégiens / lycéens · deux journées complètes
             </motion.p>
+          </div>
+        </ViewportReveal>
+
+        <ViewportReveal variants={fadeUp(motionPrefs)}>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="relative min-h-[260px] overflow-hidden border border-white/12 sm:min-h-[300px]">
+              <Image
+                src={siteImages.passeD.src}
+                alt={siteImages.passeD.alt}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
+            <div className="relative min-h-[260px] overflow-hidden border border-white/12 sm:min-h-[300px]">
+              <Image
+                src={siteImages.passeDStade.src}
+                alt={siteImages.passeDStade.alt}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
           </div>
         </ViewportReveal>
 

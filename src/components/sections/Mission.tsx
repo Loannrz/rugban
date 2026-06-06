@@ -5,14 +5,12 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
 
+import { siteImages } from "@/data/siteImages";
 import { fadeLeft, fadeRight } from "@/lib/animations";
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
 
 import { SectionLabel } from "../ui/SectionLabel";
 import { ViewportReveal } from "../ui/ViewportReveal";
-
-const missionImage =
-  "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=80";
 
 export function MissionSection() {
   const reducedMotion = useReducedMotion() === true;
@@ -27,8 +25,8 @@ export function MissionSection() {
         >
           <div className="relative h-[420px] w-full overflow-hidden border border-muted/70 lg:h-full lg:max-h-none">
             <Image
-              src={missionImage}
-              alt="Entraîneur saluant des jeunes sur un terrain de rugby"
+              src={siteImages.mission.src}
+              alt={siteImages.mission.alt}
               fill
               sizes="(min-width: 1024px) 820px, 100vw"
               className="object-cover grayscale-[0.2]"

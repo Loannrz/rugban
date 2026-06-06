@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, HeartHandshake } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ViewportReveal } from "@/components/ui/ViewportReveal";
@@ -42,6 +45,20 @@ export function InsertionRemobilisationSection() {
               et partenaires territoriaux qui accueillent des publics éloignés
               du sport.
             </motion.p>
+          </div>
+        </ViewportReveal>
+
+        <ViewportReveal variants={fadeUp(motionPrefs)}>
+          <div className="relative min-h-[280px] overflow-hidden border border-white/12 lg:min-h-[360px]">
+            <Image
+              src={siteImages.partenaireSuez.src}
+              alt={siteImages.partenaireSuez.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              quality={82}
+            />
+            <div aria-hidden className="absolute inset-0 bg-black/25" />
           </div>
         </ViewportReveal>
 

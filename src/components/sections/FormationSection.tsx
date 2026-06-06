@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, GraduationCap, Sparkles } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ViewportReveal } from "@/components/ui/ViewportReveal";
@@ -27,6 +30,20 @@ export function FormationSection() {
         className="pointer-events-none absolute -left-16 top-1/4 h-64 w-64 rounded-full bg-lime/8 blur-[90px]"
       />
       <div className="container-site relative space-y-14 lg:space-y-16">
+        <ViewportReveal variants={fadeUp(motionPrefs)}>
+          <div className="relative min-h-[280px] overflow-hidden border border-white/12 lg:min-h-[360px]">
+            <Image
+              src={siteImages.actionsColleges.src}
+              alt={siteImages.actionsColleges.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              quality={82}
+            />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+          </div>
+        </ViewportReveal>
+
         <ViewportReveal staggerChildren>
           <div className="max-w-3xl space-y-6">
             <motion.div variants={fadeUp(motionPrefs)}>

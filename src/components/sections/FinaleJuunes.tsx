@@ -1,7 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, GraduationCap, Route, Sparkles } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 import type { LucideIcon } from "lucide-react";
 
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -124,8 +127,19 @@ export function FinaleJuunesSection() {
 
         <ViewportReveal
           variants={fadeUp({ reducedMotion, narrowMotion })}
-          className="lg:col-span-5"
+          className="space-y-6 lg:col-span-5"
         >
+          <div className="relative min-h-[220px] overflow-hidden border border-lime/35 lg:min-h-[260px]">
+            <Image
+              src={siteImages.prepaSportSession.src}
+              alt={siteImages.prepaSportSession.alt}
+              fill
+              sizes="(min-width: 1024px) 480px, 100vw"
+              className="object-cover"
+              quality={82}
+            />
+          </div>
+
           <article className="relative overflow-hidden border border-lime/45 bg-gradient-to-br from-blue-dark via-[#0f2848] to-black p-8 shadow-[0_24px_60px_rgba(0,0,0,0.45)] lg:p-10">
             <div
               aria-hidden

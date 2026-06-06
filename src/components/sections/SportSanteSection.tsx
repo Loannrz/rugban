@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+
+import { siteImages } from "@/data/siteImages";
 import {
   Activity,
   ArrowUpRight,
@@ -36,8 +39,19 @@ export function SportSanteSection() {
           aria-hidden
           className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full bg-accent/10 blur-[100px]"
         />
-        <div className="container-site relative max-w-4xl space-y-6">
-          <ViewportReveal staggerChildren>
+        <div className="container-site relative grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="relative min-h-[280px] overflow-hidden border border-white/12 lg:col-span-5 lg:min-h-full">
+            <Image
+              src={siteImages.sportSanteRacing.src}
+              alt={siteImages.sportSanteRacing.alt}
+              fill
+              sizes="(min-width: 1024px) 420px, 100vw"
+              className="object-cover"
+              quality={82}
+            />
+          </div>
+
+          <ViewportReveal staggerChildren className="space-y-6 lg:col-span-7">
             <motion.div variants={fadeUp(motionPrefs)}>
               <SectionLabel label="Historique" />
             </motion.div>
@@ -68,6 +82,16 @@ export function SportSanteSection() {
             variants={fadeUp(motionPrefs)}
             className="lg:col-span-5"
           >
+            <div className="relative mb-8 min-h-[220px] overflow-hidden border border-white/12 lg:mb-0 lg:min-h-[300px]">
+              <Image
+                src={siteImages.courbevoieAnimation.src}
+                alt={siteImages.courbevoieAnimation.alt}
+                fill
+                sizes="(min-width: 1024px) 420px, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
             <SectionLabel label="Le projet" />
             <h2 className="mt-4 font-display text-[clamp(1.75rem,4vw,2.75rem)] uppercase leading-[0.95]">
               {sportSanteProject.title}

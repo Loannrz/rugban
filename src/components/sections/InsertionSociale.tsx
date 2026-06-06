@@ -1,7 +1,10 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
 import { MapPin, Route } from "lucide-react";
+
+import { siteImages } from "@/data/siteImages";
 
 import { fadeLeft, fadeRight, fadeUp, staggerContainer } from "@/lib/animations";
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
@@ -49,8 +52,19 @@ export function InsertionSocialeSection() {
         <div className="grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
           <ViewportReveal
             variants={fadeLeft({ reducedMotion, narrowMotion })}
-            className="lg:col-span-5"
+            className="space-y-6 lg:col-span-5"
           >
+            <div className="relative min-h-[240px] overflow-hidden border border-white/15 lg:min-h-[280px]">
+              <Image
+                src={siteImages.prepaSportTournoi.src}
+                alt={siteImages.prepaSportTournoi.alt}
+                fill
+                sizes="(min-width: 1024px) 480px, 100vw"
+                className="object-cover"
+                quality={82}
+              />
+            </div>
+
             <div className="relative h-full overflow-hidden border border-white/15 bg-gradient-to-br from-[#1c1c1c] via-[#121212] to-black p-8 lg:p-10">
               <div
                 aria-hidden

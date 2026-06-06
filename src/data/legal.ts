@@ -61,7 +61,7 @@ export const legalSections: LegalSection[] = [
     paragraphs: [
       "L'ensemble des contenus éditoriaux, textes, visuels, logos partenaires et éléments graphiques propres à Rugby Urban Attitude sont protégés par le droit d'auteur et le droit des marques.",
       "Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable de l'association est interdite.",
-      "Certains visuels de démonstration peuvent provenir de banques d'images tierces (notamment Unsplash) et restent soumis à leurs licences respectives.",
+      "Les photographies publiées sur le site proviennent des archives de l'association Rugby Urban Attitude et de ses partenaires, sauf mention contraire.",
     ],
   },
   {

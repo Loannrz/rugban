@@ -8,6 +8,7 @@ import {
   palmarès,
   rugbanSevensParagraph,
 } from "@/data/sevens";
+import { siteImages } from "@/data/siteImages";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
 import { cn } from "@/lib/utils";
@@ -15,9 +16,6 @@ import { cn } from "@/lib/utils";
 import { CTAButton } from "../ui/CTAButton";
 import { SectionLabel } from "../ui/SectionLabel";
 import { ViewportReveal } from "../ui/ViewportReveal";
-
-const sevensImagery =
-  "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2100&q=82";
 
 export function RugbanSevenSection() {
   const reducedMotion = useReducedMotion() === true;
@@ -135,8 +133,8 @@ export function RugbanSevenSection() {
         <ViewportReveal variants={fadeUp({ reducedMotion, narrowMotion })}>
           <div className="group relative min-h-[420px] w-full overflow-hidden border border-black/15 lg:min-h-[560px]">
             <Image
-              src={sevensImagery}
-              alt="Joueuse de rugby féminine en noir et blanc concentrée avant-match"
+              src={siteImages.rugban7s.src}
+              alt={siteImages.rugban7s.alt}
               fill
               sizes="(min-width: 1024px) 760px, 100vw"
               className="object-cover grayscale-[0.15] transition duration-700 group-hover:scale-[1.03]"
