@@ -125,7 +125,7 @@ export function InsertionSocialeSection() {
             <ul className="mt-8 space-y-5">
               {[
                 "Passe D pour les plus jeunes : immersion en club pro et sur les chantiers du sport événementiel.",
-                "Prépa Sport pour les 16-25 ans : parcours certifiant jusqu'au BAFA ou au socle BP JEPS.",
+                "Prépa Sport pour les 16-25 ans : parcours multi-sport certifiant (pas uniquement rugby), 1 session par jeune et 12 à 20 participants par promotion.",
                 "Trois blocs métiers - sportifs, socio-éducatifs, professionnels - avec clubs pros et événements terrain.",
               ].map((item, index) => (
                 <li key={item} className="flex gap-4">
@@ -217,8 +217,24 @@ export function InsertionSocialeSection() {
             </div>
 
             <p className="relative text-sm uppercase tracking-[0.22em] text-white/90">
-              16-25 ans, situation NEET • une session gratuite / an
+              16-25 ans, situation NEET • multi-sport • 1 session / jeune
             </p>
+
+            <div className="relative grid grid-cols-2 gap-3 border border-white/10 bg-black/25 p-4 text-[10px] uppercase tracking-[0.16em] text-muted">
+              <div>
+                <p className="font-semibold text-lime">Sept. – Déc.</p>
+                <p className="mt-1 normal-case tracking-normal text-white/70">
+                  Recrutement via École de la 2e chance, France Travail, centres
+                  sociaux…
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-lime">Janv. – Juin</p>
+                <p className="mt-1 normal-case tracking-normal text-white/70">
+                  Session Prépa Sport (12 à 20 jeunes)
+                </p>
+              </div>
+            </div>
 
             <div className="relative grid grid-cols-3 gap-3">
               {prepaModules.map((mod) => (

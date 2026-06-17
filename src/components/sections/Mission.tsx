@@ -59,17 +59,18 @@ export function MissionSection() {
         >
           <SectionLabel label="qui sommes-nous" />
           <h2 className="font-display text-clamp-h2 uppercase text-white">
-            Le rugby comme outil d&apos;émancipation
+            Le sport comme outil d&apos;émancipation
           </h2>
           <p className="text-lg text-muted leading-relaxed">
-            L&apos;association utilise le rugby comme média d&apos;insertion sociale auprès des jeunes
-            issus des quartiers prioritaires de la politique de la ville d&apos;Île-de-France. Des éducateurs
+            Rugban mobilise le sport et particulièrement le rugby comme média
+            d&apos;insertion sociale auprès des jeunes issus des quartiers prioritaires
+            de la politique de la ville d&apos;Île-de-France. Des éducateurs
             socio-sportifs, des interventions gratuites depuis 2006.
           </p>
           <ul className="space-y-6 text-base text-muted">
             {[
               "Interventions 100 % gratuites",
-              "6 départements franciliens mobilisés",
+              "8 départements franciliens mobilisés",
               "Jeunes régulièrement éloignés de l'emploi",
             ].map((bullet) => (
               <li key={bullet} className="flex items-start gap-3 text-primary">

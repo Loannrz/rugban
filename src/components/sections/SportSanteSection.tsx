@@ -83,9 +83,9 @@ export function SportSanteSection() {
             className="lg:col-span-5"
           >
             <div className="relative mb-8 min-h-[220px] overflow-hidden border border-white/12 lg:mb-0 lg:min-h-[300px]">
-              <Image
-                src={siteImages.courbevoieAnimation.src}
-                alt={siteImages.courbevoieAnimation.alt}
+            <Image
+              src={siteImages.sportSanteActivite.src}
+              alt={siteImages.sportSanteActivite.alt}
                 fill
                 sizes="(min-width: 1024px) 420px, 100vw"
                 className="object-cover"

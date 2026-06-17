@@ -16,7 +16,7 @@ import { buildMetadata } from "@/lib/siteMetadata";
 export const metadata: Metadata = buildMetadata({
   title: "Actions citoyennes",
   description:
-    "Rugby quartiers, Coupe des quartiers, Rugby Collège Citoyen, Coupe des collèges et Ovalie Girls : les actions citoyennes de Rugby Urban Attitude en Île-de-France.",
+    "Rugban Underground, Festival des quartiers, Coupe des quartiers, Rugby Collège Citoyen, Coupe des collèges, Ovalie Girls et actions CLJ / centres pénitentiaires : les actions citoyennes de Rugby Urban Attitude en Île-de-France.",
   path: "/nos-actions",
 });
 
@@ -38,7 +38,7 @@ export default function NosActionsPage() {
         <div className="container-site space-y-12">
           <SectionLabel label="Programmes" />
           <h2 className="font-display text-clamp-h2 uppercase tracking-[0.02em] text-white">
-            Cinq grands axes d&apos;actions citoyennes
+            Sept grands axes d&apos;actions citoyennes
           </h2>
           <p className="max-w-3xl text-base leading-relaxed text-muted">
             Des actions de proximité dans les quartiers aux grands événements

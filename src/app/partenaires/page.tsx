@@ -25,14 +25,14 @@ export default function PartenairesPage() {
     <>
       <PageHero
         title="PARTENAIRES"
-        eyebrow="Réseau financier Île-de-France"
+        eyebrow="Partenaires collectivités"
         breadcrumbs={[{ label: "Accueil", href: "/" }, { label: "Partenaires" }]}
       />
 
       <section className="section-y bg-black text-white">
         <div className="container-site space-y-16">
           <div className="space-y-12">
-            <h2 className="font-display text-clamp-h2 uppercase">Réseau financier officiel IDF</h2>
+            <h2 className="font-display text-clamp-h2 uppercase">Partenaires collectivités</h2>
             <div className="grid gap-6 overflow-visible md:grid-cols-3">
               {institutionnels.map((partner) => (
                 <PartnerLogo key={`inst-${partner.id}`} partner={partner} />

@@ -4,8 +4,9 @@ export type Partner = {
   id: string;
   name: string;
   initials: string;
-  logo: string;
+  logo?: string;
   logoClassName?: string;
+  logoPending?: boolean;
   category: PartnerCategory;
   website?: string;
 };
@@ -41,6 +42,20 @@ export const partners: Partner[] = [
     logo: "/partners/courbevoie.png",
     category: "institutional",
     website: "https://www.ville-courbevoie.fr/",
+  },
+  {
+    id: "fipd",
+    name: "FIPD",
+    initials: "FIPD",
+    logoPending: true,
+    category: "institutional",
+  },
+  {
+    id: "veolia",
+    name: "Veolia",
+    initials: "VEO",
+    logoPending: true,
+    category: "institutional",
   },
   {
     id: "impact-2024",

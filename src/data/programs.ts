@@ -1,13 +1,21 @@
 import type { LucideIcon } from "lucide-react";
-import { Flag, School, Users, Venus } from "lucide-react";
+import { Building2, Flag, Landmark, School, Users, Venus } from "lucide-react";
 
-export type ProgramIconKey = "flag" | "school" | "users" | "venus";
+export type ProgramIconKey =
+  | "flag"
+  | "school"
+  | "users"
+  | "venus"
+  | "landmark"
+  | "building";
 
 export const programIcons: Record<ProgramIconKey, LucideIcon> = {
   flag: Flag,
   school: School,
   users: Users,
   venus: Venus,
+  landmark: Landmark,
+  building: Building2,
 };
 
 export type Program = {
@@ -23,19 +31,30 @@ export type Program = {
 /** Actions citoyennes — alignées sur la structuration demandée par l'association. */
 export const programs: Program[] = [
   {
-    id: "rugby-quartiers-inter-quartiers",
+    id: "rugban-underground",
     number: 1,
-    name: "Rugby quartiers / Inter-quartiers",
+    name: "Rugban Underground",
     description:
-      "Actions de proximité et dynamiques inter-territoires : culture urbaine, initiations rugby et mobilisation des EPT franciliennes.",
-    tags: ["Quartiers", "Inter-EPT"],
+      "Un format qui mêle la culture du rugby et la culture urbaine : initiations, créativité et énergie de quartier au service du collectif.",
+    tags: ["Quartiers", "Culture urbaine"],
     icon: "users",
     detail:
-      "Ce volet regroupe nos interventions de terrain dans les quartiers prioritaires et les formats inter-quartiers : ateliers créatifs, séances sportives encadrées et événements fédérateurs entre territoires.",
+      "Ce volet regroupe nos interventions de terrain dans les quartiers prioritaires et les formats inter-quartiers : ateliers créatifs, séances sportives encadrées et événements fédérateurs entre territoires, à la croisée du rugby et des codes urbains.",
+  },
+  {
+    id: "festival-des-quartiers",
+    number: 2,
+    name: "Festival des quartiers",
+    description:
+      "Événement fédérateur au niveau des 12 EPT du territoire, avec les secteurs 75, 92, 93 et 94 de la petite couronne représentés.",
+    tags: ["12 EPT", "Petite couronne"],
+    icon: "landmark",
+    detail:
+      "Un rendez-vous annuel qui rassemble les territoires autour du sport, de la culture et du vivre-ensemble, avec une représentation équilibrée des EPT franciliens de la petite couronne.",
   },
   {
     id: "coupe-des-quartiers",
-    number: 2,
+    number: 3,
     name: "Coupe des quartiers",
     description:
       "Tournoi inter-départemental massif, structuré sur 8 départements d'Île-de-France.",
@@ -46,18 +65,18 @@ export const programs: Program[] = [
   },
   {
     id: "rugby-college-citoyen",
-    number: 3,
+    number: 4,
     name: "Rugby Collège Citoyen",
     description:
-      "26 classes suivies à Courbevoie, avec plus de 800 collégiens touchés chaque saison.",
-    tags: ["Courbevoie", "800+"],
+      "26 classes suivies à Courbevoie et Colombes, avec plus de 5 000 collégiens touchés chaque saison.",
+    tags: ["Courbevoie", "Colombes", "5000+"],
     icon: "school",
     detail:
       "Une présence pérenne en milieu scolaire : séances ludiques, règles du jeu, valeurs du rugby et passerelles vers nos parcours d'insertion.",
   },
   {
     id: "coupe-des-colleges",
-    number: 4,
+    number: 5,
     name: "Coupe des collèges",
     description:
       "Tournoi collégien à Colombes, filles et garçons mobilisés autour du fair-play et du collectif.",
@@ -68,7 +87,7 @@ export const programs: Program[] = [
   },
   {
     id: "ovalie-girls",
-    number: 5,
+    number: 6,
     name: "Ovalie Girls",
     description:
       "Événement 100 % féminin autour du rugby avec sensibilisation aux métiers de l'animation et du sport.",
@@ -76,6 +95,17 @@ export const programs: Program[] = [
     icon: "venus",
     detail:
       "Un espace pensé pour déconstruire les freins, renforcer confiance corporelle et ouvrir des perspectives d'orientation concrètes.",
+  },
+  {
+    id: "clj-centres-penitentiaires",
+    number: 7,
+    name: "CLJ & centres pénitentiaires",
+    description:
+      "Interventions auprès des 6 centres de loisirs jeunesse (CLJ) d'Île-de-France et des établissements pénitentiaires pour mineurs.",
+    tags: ["CLJ IDF", "Mineurs"],
+    icon: "building",
+    detail:
+      "Un volet d'action citoyenne en milieu fermé et en centre de loisirs : sport, éducation et remobilisation auprès de publics éloignés des dispositifs classiques.",
   },
 ];
 

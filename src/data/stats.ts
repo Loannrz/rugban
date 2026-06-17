@@ -9,13 +9,13 @@ export type StatItem = {
 export const heroStats: StatItem[] = [
   {
     id: "jeunes",
-    value: 800,
+    value: 5000,
     suffix: "+",
     label: "Jeunes touchés / an",
   },
   {
     id: "departements",
-    value: 6,
+    value: 8,
     label: "Départements",
   },
   {
@@ -27,21 +27,21 @@ export const heroStats: StatItem[] = [
   {
     id: "sessions-prepa",
     value: 1,
-    label: "Session Prépa Sport / an",
+    label: "Session Prépa Sport / jeune",
   },
 ];
 
 export const impactStats: StatItem[] = [
   {
     id: "impact-jeunes",
-    value: 800,
+    value: 5000,
     suffix: "+",
     label: "Jeunes accompagnés par an",
     shortHint: "Programmes réguliers en milieu ouvert.",
   },
   {
     id: "impact-deps",
-    value: 6,
+    value: 8,
     label: "Départements d'intervention",
     shortHint: "Maillage francilien coordonné sur le terrain.",
   },

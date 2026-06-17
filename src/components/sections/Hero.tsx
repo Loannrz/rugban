@@ -49,15 +49,6 @@ export function HeroSection() {
               <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
                 <motion.div
                   variants={fadeUp({ reducedMotion, narrowMotion })}
-                  className="w-full sm:min-w-[200px] sm:flex-1 sm:flex-none lg:w-auto"
-                >
-                  <CTAButton href="/prepa-sport" className="w-full sm:w-auto">
-                    Découvrir la Prépa Sport
-                  </CTAButton>
-                </motion.div>
-
-                <motion.div
-                  variants={fadeUp({ reducedMotion, narrowMotion })}
                   className="w-full sm:min-w-[180px] sm:flex-1 sm:flex-none lg:w-auto"
                 >
                   <CTAButton

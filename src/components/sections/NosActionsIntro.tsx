@@ -42,11 +42,12 @@ export function NosActionsIntro() {
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
               >
-                Depuis 2008, Rugby Urban Attitude utilise le rugby comme un
-                levier d&apos;éducation, d&apos;inclusion et d&apos;émancipation
-                auprès des jeunes issus des Quartiers Prioritaires de la Ville
-                en Île-de-France, mais également auprès de l&apos;ensemble des
-                publics que nous accompagnons.
+                Depuis 2008, Rugby Urban Attitude mobilise le sport et
+                particulièrement le rugby comme un levier d&apos;éducation,
+                d&apos;inclusion et d&apos;émancipation auprès des jeunes issus
+                des Quartiers Prioritaires de la Ville en Île-de-France, mais
+                également auprès de l&apos;ensemble des publics que nous
+                accompagnons.
               </motion.p>
               <motion.p
                 variants={fadeUp({ reducedMotion, narrowMotion })}

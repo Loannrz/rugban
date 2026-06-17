@@ -57,8 +57,12 @@ export const siteImages = {
     alt: "Animation rugby avec les équipes Razel-BEC à Nanterre",
   },
   sportSanteRacing: {
-    src: "/images/sport-sante/racing-visite.jpg",
-    alt: "Groupe de jeunes lors d'une visite au Racing 92",
+    src: "/images/sport-sante/seance-seniors-1.jpg",
+    alt: "Participants adultes et seniors lors d'une séance Sport Santé encadrée",
+  },
+  sportSanteActivite: {
+    src: "/images/sport-sante/seance-seniors-2.jpg",
+    alt: "Groupe de seniors en activité physique adaptée Sport Santé",
   },
   courbevoieAnimation: {
     src: "/images/courbevoie/animation-jeunes.jpg",
