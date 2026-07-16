@@ -28,14 +28,21 @@ jobs:
       - name: Installer lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Déployer sur Gandi
+            - name: Déployer sur Gandi
         env:
-          HOST: ${{ secrets.GANDI_HOST }}
-          USER: ${{ secrets.GANDI_USER }}
-          PASSWORD: ${{ secrets.GANDI_PASSWORD }}
+          GANDI_HOST: ${{ secrets.GANDI_HOST }}
+          GANDI_USER: ${{ secrets.GANDI_USER }}
+          GANDI_PASSWORD: ${{ secrets.GANDI_PASSWORD }}
         run: |
-          lftp -u "$USER","$PASSWORD" sftp://$HOST <<EOF
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 22 "$GANDI_HOST" >> ~/.ssh/known_hosts
+
+          lftp <<EOF
+          set net:max-retries 1
+          set net:timeout 20
+          set net:reconnect-interval-base 5
           set sftp:auto-confirm yes
-          mirror --reverse --delete out vhosts/rugban.fr/htdocs
+          open -u "$GANDI_USER","$GANDI_PASSWORD" "sftp://$GANDI_HOST:22"
+          mirror --reverse --delete --verbose out/ vhosts/rugban.fr/htdocs/
           bye
           EOF
