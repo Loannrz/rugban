@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     default: "Rugby Urban Attitude",
   },
   description:
-    "Depuis 2006, Rugby Urban Attitude utilise le rugby comme levier d'insertion sociale pour la jeunesse francilienne : actions gratuites, Prépa Sport et équipes élite féminines.",
+    "Depuis 2008, Rugby Urban Attitude utilise le rugby comme levier d'insertion sociale pour la jeunesse francilienne : actions gratuites, Prépa Sport et équipes élite féminines.",
   openGraph: {
     locale: "fr_FR",
     type: "website",

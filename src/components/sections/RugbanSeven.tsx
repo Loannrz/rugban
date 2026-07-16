@@ -36,7 +36,7 @@ export function RugbanSevenSection() {
         <div className="space-y-10 lg:space-y-12">
           <ViewportReveal staggerChildren>
             <motion.div variants={fadeUp({ reducedMotion, narrowMotion })}>
-              <SectionLabel label="équipe élite" className="text-ink [&_span]:bg-accent" />
+              <SectionLabel label="rugban 7s" className="text-ink [&_span]:bg-accent" />
             </motion.div>
 
             <div className="space-y-4">

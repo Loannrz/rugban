@@ -56,6 +56,6 @@ export const impactStats: StatItem[] = [
     value: 20,
     suffix: "+",
     label: "Années d'existence",
-    shortHint: "Association loi 1901 depuis 2006.",
+    shortHint: "Association loi 1901 depuis 2008.",
   },
 ];

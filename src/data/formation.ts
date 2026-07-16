@@ -1,6 +1,6 @@
 export const formationOverview = {
   status: "En développement",
-  title: "Axe formation — modules Spor Formation",
+  title: "Axe formation - modules Spor Formation",
   intro:
     "RUGBAN prépare la mise en place de modules de formation dispensés par l'association et formalisés via Spor Formation, à destination des structures souhaitant bénéficier de nos expertises et obtenir une certification à travers ces parcours.",
 };

@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  ArrowUpRight,
   Briefcase,
   Handshake,
   Landmark,
@@ -86,13 +84,6 @@ export function NosActionsAudiencesSection() {
   const narrowMotion = useIsNarrowMotion();
   const motionPrefs = { reducedMotion, narrowMotion };
 
-  const institutionalAudiences = siteAudiences.filter(
-    (audience) => audience.id !== "jeunes",
-  );
-  const jeunesAudience = siteAudiences.find(
-    (audience) => audience.id === "jeunes",
-  );
-
   return (
     <section className="section-y relative overflow-hidden border-t border-white/10 bg-black text-white">
       <div
@@ -122,12 +113,12 @@ export function NosActionsAudiencesSection() {
               className="space-y-5 lg:col-span-7"
             >
               <p className="max-w-2xl text-base leading-relaxed text-muted lg:text-[15px]">
-                Structures jeunesse, institutions, collectivités, France
-                Travail, missions locales, partenaires et jeunes de 16 à 25 ans
-                pour la Prépa Sport.
+                Centres sociaux, maisons de quartier, institutions, collectivités,
+                partenaires et jeunes des quartiers : des actions citoyennes
+                gratuites autour des valeurs du rugby.
               </p>
               <p className="inline-flex border border-white/15 bg-white/[0.03] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/80">
-                7 publics · partenaires &amp; jeunes
+                7 publics · partenaires &amp; territoires
               </p>
             </motion.div>
           </div>
@@ -135,7 +126,7 @@ export function NosActionsAudiencesSection() {
 
         <ViewportReveal variants={staggerContainer(reducedMotion, 0.08)}>
           <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-6">
-            {institutionalAudiences.map((audience, index) => (
+            {siteAudiences.map((audience, index) => (
               <AudienceCard
                 key={audience.id}
                 audience={audience}
@@ -146,56 +137,6 @@ export function NosActionsAudiencesSection() {
             ))}
           </ul>
         </ViewportReveal>
-
-        {jeunesAudience ? (
-          <ViewportReveal variants={fadeUp(motionPrefs)}>
-            <article className="group relative overflow-hidden border border-lime/40 bg-gradient-to-br from-blue-dark via-[#0f2848] to-black p-8 lg:p-10">
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,255,0,0.1),transparent_60%)]"
-              />
-              <div
-                aria-hidden
-                className="absolute -right-6 -top-6 h-28 w-28 rounded-full border border-lime/20"
-              />
-              <div
-                aria-hidden
-                className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-lime via-lime/50 to-transparent"
-              />
-
-              <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-                <div className="flex max-w-2xl flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center border border-lime/40 bg-black/40 text-lime">
-                    <UserRound aria-hidden className="h-6 w-6" />
-                  </span>
-                  <div className="space-y-3">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-lime">
-                      Public prioritaire
-                    </p>
-                    <h3 className="font-display text-[clamp(1.5rem,3.5vw,2.25rem)] uppercase leading-[0.95]">
-                      {jeunesAudience.label}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-muted lg:text-base">
-                      {jeunesAudience.text}
-                    </p>
-                  </div>
-                </div>
-
-                <Link
-                  prefetch={false}
-                  href="/prepa-sport"
-                  className="group/link inline-flex shrink-0 items-center gap-2 self-start border border-lime/50 bg-lime/10 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-lime transition-colors hover:border-lime hover:bg-lime hover:text-black lg:self-center"
-                >
-                  Découvrir la Prépa Sport
-                  <ArrowUpRight
-                    aria-hidden
-                    className="h-4 w-4 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
-                  />
-                </Link>
-              </div>
-            </article>
-          </ViewportReveal>
-        ) : null}
       </div>
     </section>
   );

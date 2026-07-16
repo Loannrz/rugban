@@ -1,5 +1,13 @@
 import type { LucideIcon } from "lucide-react";
-import { Building2, Flag, Landmark, School, Users, Venus } from "lucide-react";
+import {
+  Building2,
+  Flag,
+  Landmark,
+  Route,
+  School,
+  Users,
+  Venus,
+} from "lucide-react";
 
 export type ProgramIconKey =
   | "flag"
@@ -7,7 +15,8 @@ export type ProgramIconKey =
   | "users"
   | "venus"
   | "landmark"
-  | "building";
+  | "building"
+  | "route";
 
 export const programIcons: Record<ProgramIconKey, LucideIcon> = {
   flag: Flag,
@@ -16,6 +25,7 @@ export const programIcons: Record<ProgramIconKey, LucideIcon> = {
   venus: Venus,
   landmark: Landmark,
   building: Building2,
+  route: Route,
 };
 
 export type Program = {
@@ -28,7 +38,7 @@ export type Program = {
   detail: string;
 };
 
-/** Actions citoyennes — alignées sur la structuration demandée par l'association. */
+/** Actions citoyennes - alignées sur la structuration demandée par l'association. */
 export const programs: Program[] = [
   {
     id: "rugban-underground",
@@ -46,11 +56,11 @@ export const programs: Program[] = [
     number: 2,
     name: "Festival des quartiers",
     description:
-      "Événement fédérateur au niveau des 12 EPT du territoire, avec les secteurs 75, 92, 93 et 94 de la petite couronne représentés.",
-    tags: ["12 EPT", "Petite couronne"],
+      "Événement fédérateur au niveau des 12 EPT Métropole du Grand Paris, avec les départements 75, 92, 93 et 94.",
+    tags: ["12 EPT", "75 · 92 · 93 · 94"],
     icon: "landmark",
     detail:
-      "Un rendez-vous annuel qui rassemble les territoires autour du sport, de la culture et du vivre-ensemble, avec une représentation équilibrée des EPT franciliens de la petite couronne.",
+      "Un rendez-vous annuel qui rassemble les territoires autour du sport, de la culture et du vivre-ensemble sur l'ensemble de la Métropole du Grand Paris.",
   },
   {
     id: "coupe-des-quartiers",
@@ -72,48 +82,48 @@ export const programs: Program[] = [
     tags: ["Courbevoie", "Colombes", "5000+"],
     icon: "school",
     detail:
-      "Une présence pérenne en milieu scolaire : séances ludiques, règles du jeu, valeurs du rugby et passerelles vers nos parcours d'insertion.",
-  },
-  {
-    id: "coupe-des-colleges",
-    number: 5,
-    name: "Coupe des collèges",
-    description:
-      "Tournoi collégien à Colombes, filles et garçons mobilisés autour du fair-play et du collectif.",
-    tags: ["Collégiens", "Filles + garçons"],
-    icon: "school",
-    detail:
-      "Un format scolaire clair, accessible et encadré, favorable à la mixité et à la cohésion de classe hors des murs habituels.",
+      "Une présence pérenne en milieu scolaire : séances ludiques, règles du jeu et valeurs du rugby au service de la cohésion de classe.",
   },
   {
     id: "ovalie-girls",
-    number: 6,
+    number: 5,
     name: "Ovalie Girls",
     description:
       "Événement 100 % féminin autour du rugby avec sensibilisation aux métiers de l'animation et du sport.",
     tags: ["Filles", "APS"],
     icon: "venus",
     detail:
-      "Un espace pensé pour déconstruire les freins, renforcer confiance corporelle et ouvrir des perspectives d'orientation concrètes.",
+      "Un espace pensé pour déconstruire les freins, renforcer confiance corporelle et ouvrir des perspectives autour du sport.",
   },
   {
-    id: "clj-centres-penitentiaires",
-    number: 7,
-    name: "CLJ & centres pénitentiaires",
+    id: "csj-centres-penitentiaires",
+    number: 6,
+    name: "CSJ & centres pénitentiaires",
     description:
-      "Interventions auprès des 6 centres de loisirs jeunesse (CLJ) d'Île-de-France et des établissements pénitentiaires pour mineurs.",
-    tags: ["CLJ IDF", "Mineurs"],
+      "Interventions auprès des 6 centres de service jeunesse (CSJ) de la Police nationale en région parisienne et des établissements pénitentiaires pour mineurs.",
+    tags: ["CSJ IDF", "Mineurs"],
     icon: "building",
     detail:
-      "Un volet d'action citoyenne en milieu fermé et en centre de loisirs : sport, éducation et remobilisation auprès de publics éloignés des dispositifs classiques.",
+      "Un volet d'action citoyenne en milieu fermé et en centre de service jeunesse : sport, éducation et remobilisation auprès de publics éloignés des dispositifs classiques.",
+  },
+  {
+    id: "prepa-sport",
+    number: 7,
+    name: "Prépa Sport",
+    description:
+      "Parcours multi-sport de janvier à juin : 1 session par saison, 12 à 20 jeunes diplômés.",
+    tags: ["Janv. – Juin", "12–20 jeunes", "Multi-sport"],
+    icon: "route",
+    detail:
+      "Un dispositif d'insertion gratuit qui accompagne les jeunes de 16 à 25 ans vers l'emploi dans le sport et l'animation, avec une session unique par saison.",
   },
 ];
 
 export const siteAudiences = [
   {
     id: "jeunesse",
-    label: "Structures jeunesse",
-    text: "Missions locales, centres sociaux, associations de quartier : co-construire des parcours et des événements adaptés.",
+    label: "Centres sociaux & maisons de quartier",
+    text: "Structures de proximité : co-construire des animations, des événements et des temps forts autour des valeurs du rugby.",
   },
   {
     id: "institutions",
@@ -128,12 +138,12 @@ export const siteAudiences = [
   {
     id: "france-travail",
     label: "France Travail",
-    text: "Orientation, suivi et co-accompagnement des jeunes vers la Prépa Sport et les passerelles pro.",
+    text: "Partenariats possibles pour la mobilisation de publics en quartiers prioritaires.",
   },
   {
     id: "missions-locales",
     label: "Missions locales",
-    text: "Montage de dossiers, candidatures Prépa Sport et relais de proximité avec l'équipe permanente.",
+    text: "Relais de proximité avec l'équipe permanente pour nos actions sur le terrain.",
   },
   {
     id: "partenaires",
@@ -142,7 +152,7 @@ export const siteAudiences = [
   },
   {
     id: "jeunes",
-    label: "Jeunes 16–25 ans",
-    text: "Prépa Sport gratuite, certifications BAFA / PSC1 et trajectoire vers l'emploi dans le sport et l'animation.",
+    label: "Jeunes des quartiers",
+    text: "Collégiens, lycéens et jeunes de 16 à 25 ans : découvrir le rugby et ses valeurs à travers nos actions citoyennes gratuites.",
   },
 ] as const;

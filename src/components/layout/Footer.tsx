@@ -12,7 +12,7 @@ type FooterProps = {
   className?: string;
 };
 
-const footerLinks = [...navItems, { label: "Prépa sport", href: "/prepa-sport" }];
+const footerLinks = navItems;
 
 export function Footer({ className }: FooterProps) {
   const year = new Date().getFullYear();
@@ -53,7 +53,7 @@ export function Footer({ className }: FooterProps) {
               </p>
               <p className="text-xs leading-relaxed text-muted">
                 Association loi 1901 - insertion sociale et professionnelle par
-                le rugby en Île-de-France depuis 2006.
+                le rugby en Île-de-France depuis 2008.
               </p>
             </div>
 
@@ -83,13 +83,18 @@ export function Footer({ className }: FooterProps) {
                 <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center border border-white/12 bg-white/[0.04] text-accent">
                   <Mail className="h-3.5 w-3.5" aria-hidden />
                 </span>
-                <Link
-                  prefetch={false}
-                  href={siteConfig.emailHref}
-                  className="leading-snug text-white transition-colors hover:text-accent"
-                >
-                  {siteConfig.email}
-                </Link>
+                <div className="space-y-1 leading-snug">
+                  {siteConfig.emails.map((entry) => (
+                    <Link
+                      key={entry.address}
+                      prefetch={false}
+                      href={entry.href}
+                      className="block text-white transition-colors hover:text-accent"
+                    >
+                      {entry.address}
+                    </Link>
+                  ))}
+                </div>
               </li>
             </ul>
           </div>

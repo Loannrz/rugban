@@ -27,7 +27,7 @@ export const legalSections: LegalSection[] = [
     id: "editeur",
     title: "Éditeur du site",
     paragraphs: [
-      "Le présent site est édité par l'association Rugby Urban Attitude (RUGBAN), association loi 1901 à but non lucratif, créée en 2006 et active en Île-de-France.",
+      "Le présent site est édité par l'association Rugby Urban Attitude (RUGBAN), association loi 1901 à but non lucratif, créée en 2008 et active en Île-de-France.",
       "Siège social : 159 rue Armand Silvestre, 92400 Courbevoie, France.",
       "Les références administratives (RNA, SIRET) sont communiquées sur demande des partenaires institutionnels ou des services financeurs.",
     ],
@@ -71,7 +71,7 @@ export const legalSections: LegalSection[] = [
       "Le site ne propose pas de formulaire de contact en ligne. Les données que vous transmettez volontairement par téléphone ou courriel (identité, coordonnées, objet de la demande) sont utilisées uniquement pour répondre à votre sollicitation et assurer le suivi de la relation avec l'association.",
       "Ces données ne sont ni vendues ni cédées à des fins commerciales. Elles sont conservées pendant la durée nécessaire au traitement de votre demande, puis archivées ou supprimées conformément aux obligations légales applicables.",
       "Conformément au Règlement général sur la protection des données (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données.",
-      "Pour exercer vos droits, adressez votre demande à contact@rugban.fr en précisant l'objet de votre requête et une pièce d'identité si nécessaire.",
+      "Pour exercer vos droits, adressez votre demande à asso2s.isa@gmail.com ou stephane@rugban.fr en précisant l'objet de votre requête et une pièce d'identité si nécessaire.",
     ],
   },
   {

@@ -10,7 +10,7 @@ import { RugbanSevenSection } from "@/components/sections/RugbanSeven";
 export const metadata: Metadata = {
   title: "Accueil",
   description:
-    "Insertion par le rugby en Île-de-France depuis 2006 : programmes urbains gratuits, Prépa Sport certifiants et équipe nationale à VII.",
+    "Insertion par le rugby en Île-de-France depuis 2008 : programmes urbains gratuits, Prépa Sport certifiants et équipe nationale à VII.",
 };
 
 export default function HomePage() {

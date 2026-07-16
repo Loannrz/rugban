@@ -21,17 +21,17 @@ const contactChannels = [
     icon: Phone,
     accent: "accent" as const,
   },
-  {
-    id: "email",
+  ...siteConfig.emails.map((entry, index) => ({
+    id: `email-${index}`,
     label: "Courriel",
-    title: "Écrivez-nous",
-    value: siteConfig.email,
-    href: siteConfig.emailHref,
+    title: index === 0 ? "Écrivez-nous" : "Contact associatif",
+    value: entry.address,
+    href: entry.href,
     hint: "Jeune, structure ou entreprise - décrivez votre demande.",
     icon: Mail,
     accent: "lime" as const,
-  },
-] as const;
+  })),
+];
 
 type ContactSectionProps = {
   mapSrc: string;

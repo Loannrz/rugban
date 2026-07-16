@@ -48,7 +48,7 @@ export function MissionSection() {
             transition={{ duration: reducedMotion ? 0 : 0.8 }}
           >
             <div className="bg-accent px-12 py-4 text-[12px] font-semibold uppercase tracking-[0.4em] text-ink shadow-[0px_35px_60px_rgba(0,0,0,.6)]">
-              Depuis 2006
+              Depuis 2008
             </div>
           </motion.div>
         </ViewportReveal>
@@ -62,16 +62,15 @@ export function MissionSection() {
             Le sport comme outil d&apos;émancipation
           </h2>
           <p className="text-lg text-muted leading-relaxed">
-            Rugban mobilise le sport et particulièrement le rugby comme média
-            d&apos;insertion sociale auprès des jeunes issus des quartiers prioritaires
-            de la politique de la ville d&apos;Île-de-France. Des éducateurs
-            socio-sportifs, des interventions gratuites depuis 2006.
+            Rugban mobilise le sport et particulièrement les valeurs du rugby comme
+            outil d&apos;insertion sociale auprès des jeunes issus des quartiers
+            prioritaires de la politique de la ville d&apos;Île-de-France. Des
+            éducateurs socio-sportifs, des interventions gratuites depuis 2008.
           </p>
           <ul className="space-y-6 text-base text-muted">
             {[
               "Interventions 100 % gratuites",
               "8 départements franciliens mobilisés",
-              "Jeunes régulièrement éloignés de l'emploi",
             ].map((bullet) => (
               <li key={bullet} className="flex items-start gap-3 text-primary">
                 <MapPin aria-hidden className="mt-[3px] h-6 w-6 text-accent" />

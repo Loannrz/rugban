@@ -141,7 +141,7 @@ export function PartenairesEngagementSection() {
               className="text-base leading-relaxed text-white/60 lg:text-lg"
             >
               Trois leviers concrets pour relier vos objectifs institutionnels ou
-              corporate à un réseau sportif francilien reconnu depuis 2006.
+              corporate à un réseau sportif francilien reconnu depuis 2008.
             </motion.p>
           </div>
         </ViewportReveal>

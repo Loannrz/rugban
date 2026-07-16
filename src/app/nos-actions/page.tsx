@@ -5,7 +5,6 @@ import { FinaleJuunesSection } from "@/components/sections/FinaleJuunes";
 import { ImpactNumeriqueSection } from "@/components/sections/ImpactNumerique";
 import { NosActionsAudiencesSection } from "@/components/sections/NosActionsAudiencesSection";
 import { NosActionsIntro } from "@/components/sections/NosActionsIntro";
-import { TemoignagesSection } from "@/components/sections/TemoignagesSection";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { ProgramCard } from "@/components/ui/ProgramCard";
 import { SectionLabel } from "@/components/ui/SectionLabel";
@@ -16,7 +15,7 @@ import { buildMetadata } from "@/lib/siteMetadata";
 export const metadata: Metadata = buildMetadata({
   title: "Actions citoyennes",
   description:
-    "Rugban Underground, Festival des quartiers, Coupe des quartiers, Rugby Collège Citoyen, Coupe des collèges, Ovalie Girls et actions CLJ / centres pénitentiaires : les actions citoyennes de Rugby Urban Attitude en Île-de-France.",
+    "Rugban Underground, Festival des quartiers, Coupe des quartiers, Rugby Collège Citoyen, Ovalie Girls, CSJ / centres pénitentiaires et Prépa Sport : les actions citoyennes de Rugby Urban Attitude en Île-de-France.",
   path: "/nos-actions",
 });
 
@@ -60,7 +59,6 @@ export default function NosActionsPage() {
       <NosActionsAudiencesSection />
 
       <ImpactNumeriqueSection />
-      <TemoignagesSection />
       <FinaleJuunesSection />
     </>
   );

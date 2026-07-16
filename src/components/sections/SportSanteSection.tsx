@@ -182,14 +182,17 @@ export function SportSanteSection() {
                     <Phone aria-hidden className="h-4 w-4" />
                     {siteConfig.phone}
                   </Link>
-                  <Link
-                    prefetch={false}
-                    href={siteConfig.emailHref}
-                    className="inline-flex items-center gap-3 border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:border-lime hover:text-lime"
-                  >
-                    <Mail aria-hidden className="h-4 w-4" />
-                    {siteConfig.email}
-                  </Link>
+                  {siteConfig.emails.map((entry) => (
+                    <Link
+                      key={entry.address}
+                      prefetch={false}
+                      href={entry.href}
+                      className="inline-flex items-center gap-3 border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:border-lime hover:text-lime"
+                    >
+                      <Mail aria-hidden className="h-4 w-4" />
+                      {entry.address}
+                    </Link>
+                  ))}
                 </div>
                 <Link
                   prefetch={false}

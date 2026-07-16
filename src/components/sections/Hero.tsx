@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="relative z-20 shrink-0 text-center lg:absolute lg:inset-x-0 lg:top-[5.25rem] lg:pl-8 lg:text-left xl:pl-10">
           <ViewportReveal immediate className="block">
             <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-accent sm:text-[11px]">
-              Association loi 1901 • Depuis 2006 • Île-de-France
+              Association loi 1901 • Depuis 2008 • Île-de-France
             </span>
           </ViewportReveal>
         </div>
@@ -40,7 +40,7 @@ export function HeroSection() {
           <div className="mb-4 space-y-3 sm:mb-5 sm:space-y-4 lg:pl-8 xl:pl-10">
             <ViewportReveal>
               <p className="mx-auto max-w-[520px] text-center text-sm leading-snug text-muted sm:text-[15px] lg:mx-0 lg:text-left">
-                Depuis 2006, nous utilisons le sport comme levier d&apos;insertion
+                Depuis 2008, nous utilisons le sport comme levier d&apos;insertion
                 sociale et professionnelle pour la jeunesse francilienne.
               </p>
             </ViewportReveal>

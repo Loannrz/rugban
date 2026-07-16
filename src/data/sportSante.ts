@@ -1,7 +1,7 @@
 export const sportSanteHistory = {
   title: "Impact Sport Academy & Rugby Urban Attitude",
   paragraphs: [
-    "Impact Sport Academy est la première appellation du projet fondé en 2006 par Stéphane, structuré autour de deux axes complémentaires : le sport santé et le sport citoyen.",
+    "Impact Sport Academy est la première appellation du projet fondé en 2008 par Stéphane, structuré autour de deux axes complémentaires : le sport santé et le sport citoyen.",
     "Depuis 2010, Rugby Urban Attitude porte spécifiquement l'axe sport citoyen avec sa propre identité, tandis que l'action Sport Santé continue de se développer au sein d'Impact Sport Academy.",
   ],
 };

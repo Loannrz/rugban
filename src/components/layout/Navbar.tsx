@@ -15,7 +15,6 @@ import { navItems } from "@/data/navigation";
 import { staggerContainer } from "@/lib/animations";
 import { cn } from "@/lib/utils";
 
-import { CTAButton } from "../ui/CTAButton";
 import { RugbanLogo } from "../ui/RugbanLogo";
 
 export function Navbar() {
@@ -121,16 +120,6 @@ export function Navbar() {
                         </Link>
                       </motion.li>
                     ))}
-                    <motion.li variants={mobileItemVariants}>
-                      <CTAButton
-                        href="/prepa-sport"
-                        aria-label="Aller au programme Prépa Sport"
-                        onClick={() => setOpen(false)}
-                        className="mt-1 w-full sm:w-auto"
-                      >
-                        Rejoindre la Prépa Sport
-                      </CTAButton>
-                    </motion.li>
                   </motion.ul>
                 </motion.nav>
               </>
@@ -169,13 +158,6 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <CTAButton
-              href="/prepa-sport"
-              aria-label="Aller au programme Prépa Sport"
-              className="min-h-[40px] px-6 text-[12px]"
-            >
-              Rejoindre la Prépa Sport
-            </CTAButton>
           </div>
 
           <button

@@ -34,7 +34,7 @@ export function NosActionsIntro() {
               variants={fadeUp({ reducedMotion, narrowMotion })}
               className="font-display text-[clamp(1.75rem,4vw,3rem)] uppercase leading-[0.95] text-white"
             >
-              Un maillage francilien depuis 2006
+              Un maillage francilien depuis 2008
             </motion.h2>
 
             <div className="space-y-6">
@@ -42,47 +42,36 @@ export function NosActionsIntro() {
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
               >
-                Depuis 2008, Rugby Urban Attitude mobilise le sport et
-                particulièrement le rugby comme un levier d&apos;éducation,
-                d&apos;inclusion et d&apos;émancipation auprès des jeunes issus
-                des Quartiers Prioritaires de la Ville en Île-de-France, mais
-                également auprès de l&apos;ensemble des publics que nous
-                accompagnons.
+                Depuis 2008, Rugby Urban Attitude s&apos;appuie sur les centres
+                sociaux et les maisons de quartier pour transmettre les valeurs du
+                rugby auprès des jeunes des Quartiers Prioritaires de la Ville en
+                Île-de-France.
               </motion.p>
               <motion.p
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
               >
-                À travers des animations gratuites, des événements sportifs,
-                des actions citoyennes et des parcours d&apos;insertion, nous
-                accompagnons chaque année plusieurs milliers de jeunes dans leur
-                développement personnel et leur ouverture vers de nouvelles
-                perspectives.
+                À travers des animations gratuites, des événements sportifs et des
+                actions citoyennes, nous accompagnons chaque année plusieurs milliers
+                de jeunes dans leur développement personnel et leur ouverture vers
+                de nouvelles perspectives.
               </motion.p>
               <motion.p
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
               >
-                Notre ambition est simple : transmettre les valeurs du rugby
-                pour favoriser le vivre-ensemble, démocratiser la pratique
-                sportive, renforcer la confiance en soi et contribuer à la
-                construction de parcours d&apos;avenir.
+                Notre ambition est simple : transmettre les valeurs du rugby pour
+                favoriser le vivre-ensemble, démocratiser la pratique sportive,
+                renforcer la confiance en soi et contribuer à la construction de
+                parcours d&apos;avenir.
               </motion.p>
               <motion.p
                 variants={fadeUp({ reducedMotion, narrowMotion })}
                 className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
               >
-                Notre public principal est constitué de collégiens, mais nous
-                intervenons également de manière importante auprès des écoles
-                primaires.
-              </motion.p>
-              <motion.p
-                variants={fadeUp({ reducedMotion, narrowMotion })}
-                className="text-base leading-relaxed text-muted lg:text-lg lg:leading-relaxed"
-              >
-                Nous souhaitons développer davantage les actions à destination des
-                plus de 16 ans afin de créer davantage de passerelles entre nos
-                actions sportives, citoyennes et le dispositif Prépa Sport.
+                Les structures de proximité - centres sociaux, maisons de quartier,
+                associations - sont notre public principal et nos partenaires de
+                terrain pour initier les jeunes à la culture du rugby.
               </motion.p>
             </div>
           </div>

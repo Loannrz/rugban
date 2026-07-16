@@ -6,6 +6,7 @@ export type NavItem = {
 export const navItems: NavItem[] = [
   { label: "Actions citoyennes", href: "/nos-actions" },
   { label: "Insertion", href: "/insertion" },
+  { label: "Prépa sport", href: "/prepa-sport" },
   { label: "Sport santé", href: "/sport-sante" },
   { label: "Formation", href: "/formation" },
   { label: "Rugban 7s", href: "/rugban-7s" },
@@ -22,8 +23,18 @@ export const siteConfig = {
   city: "Courbevoie",
   phone: "06 80 04 40 44",
   phoneHref: "tel:+33680044044",
-  email: "contact@rugban.fr",
-  emailHref: "mailto:contact@rugban.fr",
+  email: "asso2s.isa@gmail.com",
+  emailHref: "mailto:asso2s.isa@gmail.com",
+  emails: [
+    {
+      address: "asso2s.isa@gmail.com",
+      href: "mailto:asso2s.isa@gmail.com",
+    },
+    {
+      address: "stephane@rugban.fr",
+      href: "mailto:stephane@rugban.fr",
+    },
+  ],
   social: {
     facebook: "https://www.facebook.com/",
     instagram: "https://www.instagram.com/",
