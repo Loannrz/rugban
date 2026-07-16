@@ -25,17 +25,25 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Deploy to Gandi
         env:
-          HOST: ${{ secrets.GANDI_HOST }}
-          USER: ${{ secrets.GANDI_USER }}
-          PASSWORD: ${{ secrets.GANDI_PASSWORD }}
+          GANDI_HOST: ${{ secrets.GANDI_HOST }}
+          GANDI_USER: ${{ secrets.GANDI_USER }}
+          GANDI_PASSWORD: ${{ secrets.GANDI_PASSWORD }}
         run: |
-          lftp -u "$USER","$PASSWORD" "sftp://$HOST:22" <<EOF
-          set sftp:auto-confirm yes
-          mirror --reverse --delete out/ vhosts/rugban.fr/htdocs/
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 22 "$GANDI_HOST" >> ~/.ssh/known_hosts
+
+          sshpass -p "$GANDI_PASSWORD" sftp \
+            -o BatchMode=no \
+            -o ConnectTimeout=20 \
+            -o StrictHostKeyChecking=yes \
+            -P 22 \
+            "$GANDI_USER@$GANDI_HOST" <<EOF
+          cd vhosts/rugban.fr/htdocs
+          put -r out/*
           bye
           EOF
