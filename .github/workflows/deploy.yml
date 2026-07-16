@@ -10,39 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le dépôt
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Installer Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Installer les dépendances
+      - name: Install dependencies
         run: npm ci
 
-      - name: Générer le site statique
+      - name: Build Next.js
         run: npm run build
 
-      - name: Installer lftp
+      - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-            - name: Déployer sur Gandi
+      - name: Deploy to Gandi
         env:
-          GANDI_HOST: ${{ secrets.GANDI_HOST }}
-          GANDI_USER: ${{ secrets.GANDI_USER }}
-          GANDI_PASSWORD: ${{ secrets.GANDI_PASSWORD }}
+          HOST: ${{ secrets.GANDI_HOST }}
+          USER: ${{ secrets.GANDI_USER }}
+          PASSWORD: ${{ secrets.GANDI_PASSWORD }}
         run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -p 22 "$GANDI_HOST" >> ~/.ssh/known_hosts
-
-          lftp <<EOF
-          set net:max-retries 1
-          set net:timeout 20
-          set net:reconnect-interval-base 5
+          lftp -u "$USER","$PASSWORD" "sftp://$HOST:22" <<EOF
           set sftp:auto-confirm yes
-          open -u "$GANDI_USER","$GANDI_PASSWORD" "sftp://$GANDI_HOST:22"
-          mirror --reverse --delete --verbose out/ vhosts/rugban.fr/htdocs/
+          mirror --reverse --delete out/ vhosts/rugban.fr/htdocs/
           bye
           EOF
