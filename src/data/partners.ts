@@ -48,7 +48,7 @@ export const partners: Partner[] = [
     name: "FIPDR",
     initials: "FIPDR",
     logo: "/partners/fipdr.png",
-    logoClassName: "max-h-[62%] max-w-[62%]",
+    logoClassName: "p-[18%]",
     category: "institutional",
   },
   {
@@ -64,7 +64,7 @@ export const partners: Partner[] = [
     name: "Impact 2024",
     initials: "P24",
     logo: "/partners/impact-2024.png",
-    logoClassName: "max-h-[92%] max-w-[92%]",
+    logoClassName: "p-1",
     category: "private",
   },
   {
