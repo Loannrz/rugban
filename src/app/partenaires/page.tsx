@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { PartenairesDevenirSection } from "@/components/sections/PartenairesDevenirSection";
 import { PartenairesEngagementSection } from "@/components/sections/PartenairesEngagement";
-import { PartenairesTaxeApprentissageSection } from "@/components/sections/PartenairesTaxeApprentissage";
+import { PartenairesTaxeApprentissageSection, SHOW_TAXE_APPRENTISSAGE_SECTION } from "@/components/sections/PartenairesTaxeApprentissage";
 import { PartnerLogo } from "@/components/ui/PartnerLogo";
 
 import { partners } from "@/data/partners";
@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/siteMetadata";
 export const metadata: Metadata = buildMetadata({
   title: "Partenaires",
   description:
-    "Financements institutionnels franciliens, taxe apprentissage, visibilités sportives urbaines.",
+    "Financements institutionnels franciliens et visibilités sportives urbaines.",
   path: "/partenaires",
 });
 
@@ -53,7 +53,7 @@ export default function PartenairesPage() {
 
       <PartenairesEngagementSection />
 
-      <PartenairesTaxeApprentissageSection />
+      {SHOW_TAXE_APPRENTISSAGE_SECTION ? <PartenairesTaxeApprentissageSection /> : null}
 
       <PartenairesDevenirSection />
     </>

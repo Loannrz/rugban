@@ -4,7 +4,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const LOGO_SRC = "/logo-rugban.png";
-const ASPECT = 427 / 302;
+const ASPECT = 1024 / 697;
 
 type RugbanLogoProps = {
   className?: string;

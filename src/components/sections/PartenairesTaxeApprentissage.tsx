@@ -20,6 +20,9 @@ import {
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { useIsNarrowMotion } from "@/lib/useMediaQuery";
 
+/** Remettre à `true` pour réafficher la section (prévu année prochaine). */
+export const SHOW_TAXE_APPRENTISSAGE_SECTION = false;
+
 const blockIcons: Record<(typeof taxeApprentissageBlocks)[number]["id"], LucideIcon> = {
   siret: Building2,
   soltea: ExternalLink,
@@ -72,6 +75,8 @@ export function PartenairesTaxeApprentissageSection() {
   const reducedMotion = useReducedMotion() === true;
   const narrowMotion = useIsNarrowMotion();
   const motionPrefs = { reducedMotion, narrowMotion };
+
+  if (!SHOW_TAXE_APPRENTISSAGE_SECTION) return null;
 
   return (
     <section className="section-y relative overflow-hidden border-t border-white/10 bg-black text-white">

@@ -20,7 +20,7 @@ export const heroStats: StatItem[] = [
   },
   {
     id: "experience",
-    value: 20,
+    value: 18,
     suffix: "+",
     label: "Ans d'expérience",
   },
@@ -53,7 +53,7 @@ export const impactStats: StatItem[] = [
   },
   {
     id: "impact-anciensnete",
-    value: 20,
+    value: 18,
     suffix: "+",
     label: "Années d'existence",
     shortHint: "Association loi 1901 depuis 2008.",
