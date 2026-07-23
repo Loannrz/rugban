@@ -6,6 +6,8 @@ export type Partner = {
   initials: string;
   logo?: string;
   logoClassName?: string;
+  /** Taille max du logo dans la carte (px). Utile pour les logos carrés. */
+  logoMaxSize?: number;
   logoPending?: boolean;
   category: PartnerCategory;
   website?: string;
@@ -48,7 +50,7 @@ export const partners: Partner[] = [
     name: "FIPDR",
     initials: "FIPDR",
     logo: "/partners/fipdr.png",
-    logoClassName: "p-[18%]",
+    logoMaxSize: 150,
     category: "institutional",
   },
   {
@@ -64,7 +66,6 @@ export const partners: Partner[] = [
     name: "Impact 2024",
     initials: "P24",
     logo: "/partners/impact-2024.png",
-    logoClassName: "p-1",
     category: "private",
   },
   {

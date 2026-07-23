@@ -29,26 +29,30 @@ export function PartnerLogo({ partner, className }: PartnerLogoProps) {
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
 
         <div className="relative aspect-[16/10] w-full overflow-hidden bg-white">
-          <div className="absolute inset-0 flex items-center justify-center p-5">
+          <div className="absolute inset-0 flex items-center justify-center p-6">
             {partner.logoPending || !partner.logo ? (
               <span className="font-display text-2xl uppercase tracking-[0.12em] text-ink/55">
                 {partner.initials}
               </span>
             ) : (
-              <div
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={400}
+                height={250}
                 className={cn(
-                  "relative h-full w-full",
+                  "h-auto w-auto max-h-full max-w-full object-contain",
                   partner.logoClassName,
                 )}
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  fill
-                  sizes="(max-width: 768px) 90vw, 30vw"
-                  className="object-contain"
-                />
-              </div>
+                style={
+                  partner.logoMaxSize
+                    ? {
+                        maxHeight: partner.logoMaxSize,
+                        maxWidth: partner.logoMaxSize,
+                      }
+                    : undefined
+                }
+              />
             )}
           </div>
         </div>
